@@ -85,8 +85,7 @@ int main() {
                     std::cout << bopArr[i].bopName << std::endl;
                 break;
             case 'd':
-            case 'D':
-            {
+            case 'D': {
                 std::cout << "\nEnter your preference:\n"
                     << "0 - real name\n"
                     << "1 - title\n"
