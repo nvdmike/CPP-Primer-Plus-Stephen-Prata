@@ -91,7 +91,7 @@ int main() {
                     << "0 - real name\n"
                     << "1 - title\n"
                     << "2 - bop name\n";
-                int errors = 0;                                    // счётчик ошибок
+                int errors = 0;                                   // счётчик ошибок
                 for (int i = 0; i < SIZE; ++i) {
                     std::cout << "\nPlease, set your preference for " << i + 1 << " memeber of BOP: ";
                     if (!(std::cin >> bopArr[i].preference)) {    // если при заполнении вводятся некорректные значения, увеличить счётчик ошибок и прекратить заполнение
