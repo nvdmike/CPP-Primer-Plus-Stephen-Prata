@@ -52,8 +52,7 @@ int main() {
         for (int i = 0; i < num; ++i)
             if (ippsArr[i].donationAmount >= 10000)
                 std::cout << "Patron name: " << ippsArr[i].patronName << ", donation amount: " << ippsArr[i].donationAmount << std::endl;
-    }
-    else {
+    } else {
         std::cout << "\nGrand Patrons:" << std::endl;
         std::cout << "none" << std::endl;
     }
@@ -62,8 +61,7 @@ int main() {
         for (int i = 0; i < num; ++i)
             if (ippsArr[i].donationAmount < 10000)
                 std::cout << "Patron name: " << ippsArr[i].patronName << ", donation amount: " << ippsArr[i].donationAmount << std::endl;
-    }
-    else {
+    } else {
         std::cout << "\nPatrons:" << std::endl;
         std::cout << "none" << std::endl;
     }
