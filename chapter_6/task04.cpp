@@ -56,7 +56,7 @@ struct bop {
 
 int main() {
     std::cout << "Benevolent Order of Programmers Report\n";
-    showMenu();                                             // отображение меню
+    showMenu();                                                // отображение меню
     bop bopArr[SIZE] = {
         { "Wimp Macho", "Senior programmer", "Macho man" },
         { "Raki Rhodes", "Junior programmer", "Senior" },
@@ -91,15 +91,15 @@ int main() {
                     << "0 - real name\n"
                     << "1 - title\n"
                     << "2 - bop name\n";
-                int errors = 0;					// счётчик ошибок
+                int errors = 0;                                    // счётчик ошибок
                 for (int i = 0; i < SIZE; ++i) {
                     std::cout << "\nPlease, set your preference for " << i + 1 << " memeber of BOP: ";
-                    if (!(std::cin >> bopArr[i].preference)) {  // если при заполнении вводятся некорректные значения, увеличить счётчик ошибок и прекратить заполнение
+                    if (!(std::cin >> bopArr[i].preference)) {    // если при заполнении вводятся некорректные значения, увеличить счётчик ошибок и прекратить заполнение
                         errors++;
                         break;
                     }
                 }
-                if (errors == 0) {					// если ошибок в заполнении нет, отобразить массив стркутур, в соответствии с предпочтениями
+                if (errors == 0) {                                // если ошибок в заполнении нет, отобразить массив стркутур, в соответствии с предпочтениями
                     for (int i = 0; i < SIZE; ++i) {
                         switch (bopArr[i].preference) {
                         case 0:
@@ -114,7 +114,7 @@ int main() {
                         }
                     }
                 }
-                else {                                // если есть ошибки, вывести сообщение
+                else {                                            // если есть ошибки, вывести сообщение
                     std::cout << "\nIt is not possible choice. Please try again.\n";
                     break;
                 }
