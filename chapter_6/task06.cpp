@@ -21,7 +21,7 @@ struct ipps {
 int main() {
 	std::cout << "Enter the number of patrons: ";
 	int num, grandPatrons = 0, patrons = 0;
-	std::cin >> num;					// количество меценатов
+	std::cin >> num;		// количество меценатов
 	ipps* ippsArr = new ipps[num];
 	for (int i = 0; i < num; i++) {
 		std::cout << "Enter #" << i + 1 << " patron name: ";
@@ -29,11 +29,11 @@ int main() {
 		std::cout << "Enter sum of donation: ";
 		std::cin >> ippsArr[i].donationAmount;
 		if (ippsArr[i].donationAmount >= 10000)
-			grandPatrons++;				// подсчёт тех, кто пожертвовал больше 10000
+			grandPatrons++;	// подсчёт тех, кто пожертвовал больше 10000
 		else
-			patrons++;				// подсчёт тех, кто пожертвовал меньше 10000
+			patrons++;	// подсчёт тех, кто пожертвовал меньше 10000
 	}
-	if (grandPatrons > 0) {					// вывести отдельным списком тех, кто пожертвовал больше 10000
+	if (grandPatrons > 0) {		// вывести отдельным списком тех, кто пожертвовал больше 10000
 		std::cout << "\nGrand Patrons:" << std::endl;
 		for (int i = 0; i < num; ++i)
 			if (ippsArr[i].donationAmount >= 10000)
@@ -42,7 +42,7 @@ int main() {
 		std::cout << "\nGrand Patrons:" << std::endl;
 		std::cout << "none" << std::endl;
 	}
-	if (patrons > 0) {					// вывести отдельным списком тех, кто пожертвовал менее 10000
+	if (patrons > 0) {		// вывести отдельным списком тех, кто пожертвовал менее 10000
 		std::cout << "\nPatrons:" << std::endl;
 		for (int i = 0; i < num; ++i)
 			if (ippsArr[i].donationAmount < 10000)
