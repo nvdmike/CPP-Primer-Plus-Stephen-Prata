@@ -69,58 +69,58 @@ int main() {
     std::cin >> choice;
     while (choice != 'q' && choice != 'Q') {
         switch (choice) {
-        case 'a':
-        case 'A':
-            for (int i = 0; i < SIZE; ++i)
-                std::cout << bopArr[i].realName << std::endl;
-            break;
-        case 'b':
-        case 'B':
-            for (int i = 0; i < SIZE; ++i)
-                std::cout << bopArr[i].title << std::endl;
-            break;
-        case 'c':
-        case 'C':
-            for (int i = 0; i < SIZE; ++i)
-                std::cout << bopArr[i].bopName << std::endl;
-            break;
-        case 'd':
-        case 'D':
-        {
-            std::cout << "\nEnter your preference:\n"
-                << "0 - real name\n"
-                << "1 - title\n"
-                << "2 - bop name\n";
-            int errors = 0;					// счётчик ошибок
-            for (int i = 0; i < SIZE; ++i) {
-                std::cout << "\nPlease, set your preference for " << i + 1 << " memeber of BOP: ";
-                if (!(std::cin >> bopArr[i].preference)) {	// если при заполнении вводятся некорректные значения, увеличить счётчик ошибок и прекратить заполнение
-                    errors++;
-                    break;
-                }
-            }
-            if (errors == 0) {					// если ошибок в заполнении нет, отобразить массив стркутур, в соответствии с предпочтениями
+            case 'a':
+            case 'A':
+                for (int i = 0; i < SIZE; ++i)
+                    std::cout << bopArr[i].realName << std::endl;
+                break;
+            case 'b':
+            case 'B':
+                for (int i = 0; i < SIZE; ++i)
+                    std::cout << bopArr[i].title << std::endl;
+                break;
+            case 'c':
+            case 'C':
+                for (int i = 0; i < SIZE; ++i)
+                    std::cout << bopArr[i].bopName << std::endl;
+                break;
+            case 'd':
+            case 'D':
+            {
+                std::cout << "\nEnter your preference:\n"
+                    << "0 - real name\n"
+                    << "1 - title\n"
+                    << "2 - bop name\n";
+                int errors = 0;					// счётчик ошибок
                 for (int i = 0; i < SIZE; ++i) {
-                    switch (bopArr[i].preference) {
-                    case 0:
-                        std::cout << bopArr[i].realName << std::endl;
-                        break;
-                    case 1:
-                        std::cout << bopArr[i].title << std::endl;
-                        break;
-                    case 2:
-                        std::cout << bopArr[i].bopName << std::endl;
+                    std::cout << "\nPlease, set your preference for " << i + 1 << " memeber of BOP: ";
+                    if (!(std::cin >> bopArr[i].preference)) {  // если при заполнении вводятся некорректные значения, увеличить счётчик ошибок и прекратить заполнение
+                        errors++;
                         break;
                     }
                 }
-            }
-            else {                                                // если есть ошибки, вывести сообщение
-                std::cout << "\nIt is not possible choice. Please try again.\n";
+                if (errors == 0) {					// если ошибок в заполнении нет, отобразить массив стркутур, в соответствии с предпочтениями
+                    for (int i = 0; i < SIZE; ++i) {
+                        switch (bopArr[i].preference) {
+                        case 0:
+                            std::cout << bopArr[i].realName << std::endl;
+                            break;
+                        case 1:
+                            std::cout << bopArr[i].title << std::endl;
+                            break;
+                        case 2:
+                            std::cout << bopArr[i].bopName << std::endl;
+                            break;
+                        }
+                    }
+                }
+                else {                                                // если есть ошибки, вывести сообщение
+                    std::cout << "\nIt is not possible choice. Please try again.\n";
+                    break;
+                }
                 break;
             }
-            break;
-        }
-        default: std::cout << "\nThis is not possible choice. Please, try again.\n";
+            default: std::cout << "\nThis is not possible choice. Please, try again.\n";
         }
         std::cin.clear();                                        // очистка ввода
         while (std::cin.get() != '\n');
