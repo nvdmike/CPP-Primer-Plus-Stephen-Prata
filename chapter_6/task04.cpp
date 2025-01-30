@@ -114,7 +114,7 @@ int main() {
                     }
                 }
             }
-            else {                            // если есть ошибки, вывести сообщение
+            else {                                        // если есть ошибки, вывести сообщение
                 std::cout << "\nIt is not possible choice. Please try again.\n";
                 break;
             }
