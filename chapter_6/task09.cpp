@@ -42,12 +42,12 @@ int main() {
         getline(file, ippsArr[i].patronName);
         (file >> ippsArr[i].donationAmount).get();
         if (ippsArr[i].donationAmount >= 10000)
-            grandPatrons++;					// подсчёт тех, кто пожертвовал больше 10000
+            grandPatrons++;    // подсчёт тех, кто пожертвовал больше 10000
         else
-            patrons++;						// подсчёт тех, кто пожертвовал меньше 10000
+            patrons++;         // подсчёт тех, кто пожертвовал меньше 10000
     }
     file.close();
-    if (grandPatrons > 0) {					// вывести отдельным списком тех, кто пожертвовал больше 10000
+    if (grandPatrons > 0) {    // вывести отдельным списком тех, кто пожертвовал больше 10000
         std::cout << "\nGrand Patrons:" << std::endl;
         for (int i = 0; i < num; ++i)
             if (ippsArr[i].donationAmount >= 10000)
@@ -57,7 +57,7 @@ int main() {
         std::cout << "\nGrand Patrons:" << std::endl;
         std::cout << "none" << std::endl;
     }
-    if (patrons > 0) {						// вывести отдельным списком тех, кто пожертвовал менее 10000
+    if (patrons > 0) {        // вывести отдельным списком тех, кто пожертвовал менее 10000
         std::cout << "\nPatrons:" << std::endl;
         for (int i = 0; i < num; ++i)
             if (ippsArr[i].donationAmount < 10000)
