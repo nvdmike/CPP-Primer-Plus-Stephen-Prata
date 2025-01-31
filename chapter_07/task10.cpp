@@ -34,10 +34,10 @@ double division(double x, double y);
 
 int main() {
 	int menu;
+	double x, y;
 	double (*pt[SIZE])(double, double) = {
 		add, subtraction, multiplication, division
 	};
-	double x, y;
 	showMenu();
 	while (std::cin >> menu) {
 		switch (menu) {
