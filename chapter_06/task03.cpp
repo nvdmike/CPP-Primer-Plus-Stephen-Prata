@@ -29,20 +29,16 @@ int main() {
 		if ('c' == choice) {
 			carnivore();
 			break;
-		}
-		else if ('p' == choice) {
+		} else if ('p' == choice) {
 			pianist();
 			break;
-		}
-		else if ('t' == choice) {
+		} else if ('t' == choice) {
 			tree();
 			break;
-		}
-		else if ('g' == choice) {
+		} else if ('g' == choice) {
 			game();
 			break;
-		}
-		else
+		} else
 			std::cout << "Please enter a c, p, t, or g: ";
 	}
 	return 0;
