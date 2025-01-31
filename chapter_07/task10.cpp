@@ -68,8 +68,7 @@ int main() {
 	return 0;
 }
 
-void showMenu()
-{
+void showMenu() {
 	std::cout << "[0] Add\t\t\t[1] Subtraction" << std::endl;
 	std::cout << "[2] Multiplication\t[3] Division" << std::endl;
 	std::cout << "Choose option: ";
