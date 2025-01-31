@@ -122,7 +122,6 @@ int main() {
             default: std::cout << "\nThis is not possible choice. Please, try again.\n";
         }
         std::cin.clear();                                        // очистка ввода
-        while (std::cin.get() != '\n');
         std::cout << "\nNext choice: ";
         std::cin >> choice;
     }
