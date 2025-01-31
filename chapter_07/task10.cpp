@@ -41,26 +41,26 @@ int main() {
 	showMenu();
 	while (std::cin >> menu) {
 		switch (menu) {
-			case 1:
-				std::cout << "Enter two numbers to add: ";
-				std::cin >> x >> y;
-				std::cout << "Add result: " << calculate(x, y, pt[0]) << std::endl;
-				break;
-			case 2:
-				std::cout << "Enter two numbers to subtract: ";
-				std::cin >> x >> y;
-				std::cout << "Subtraction result: " << calculate(x, y, pt[1]) << std::endl;
-				break;
-			case 3:
-				std::cout << "Enter two numbers to multiply: ";
-				std::cin >> x >> y;
-				std::cout << "Multiplication result: " << calculate(x, y, pt[2]) << std::endl;
-				break;
-			case 4:
-				std::cout << "Enter two numbers to divide: ";
-				std::cin >> x >> y;
-				std::cout << "Division result: " << calculate(x, y, pt[3]) << std::endl;
-				break;
+		case 0:
+			std::cout << "Enter two numbers to add: ";
+			std::cin >> x >> y;
+			std::cout << "Add result: " << calculate(x, y, pt[menu]) << std::endl;
+			break;
+		case 1:
+			std::cout << "Enter two numbers to subtract: ";
+			std::cin >> x >> y;
+			std::cout << "Subtraction result: " << calculate(x, y, pt[menu]) << std::endl;
+			break;
+		case 2:
+			std::cout << "Enter two numbers to multiply: ";
+			std::cin >> x >> y;
+			std::cout << "Multiplication result: " << calculate(x, y, pt[menu]) << std::endl;
+			break;
+		case 3:
+			std::cout << "Enter two numbers to divide: ";
+			std::cin >> x >> y;
+			std::cout << "Division result: " << calculate(x, y, pt[menu]) << std::endl;
+			break;
 		}
 		showMenu();
 	}
@@ -70,8 +70,8 @@ int main() {
 
 void showMenu()
 {
-	std::cout << "[1] Add\t\t\t[2] Subtraction" << std::endl;
-	std::cout << "[3] Multiplication\t[4] Division" << std::endl;
+	std::cout << "[0] Add\t\t\t[1] Subtraction" << std::endl;
+	std::cout << "[2] Multiplication\t[3] Division" << std::endl;
 	std::cout << "Choose option: ";
 }
 
