@@ -18,6 +18,7 @@ struct PizzaCompanies {
 	int diameter;
 	float weight;
 };
+
 int main() {
 	using namespace std;
 	PizzaCompanies pc;
