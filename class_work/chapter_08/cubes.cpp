@@ -1,4 +1,4 @@
-// cubes.cpp -- обычные и ссылочные аргументы
+// cubes.cpp -- РѕР±С‹С‡РЅС‹Рµ Рё СЃСЃС‹Р»РѕС‡РЅС‹Рµ Р°СЂРіСѓРјРµРЅС‚С‹
 #include <iostream>
 
 double cube(double a);
@@ -8,9 +8,9 @@ int main() {
 	using namespace std;
 	double x = 3.0;
 	cout << cube(x);
-	cout << " = cube of " << x << endl;	// вывод значения в кубе
+	cout << " = cube of " << x << endl;	// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ РІ РєСѓР±Рµ
 	cout << refcube(x);
-	cout << " = cube of " << x << endl;	// вывод значения в кубе
+	cout << " = cube of " << x << endl;	// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ РІ РєСѓР±Рµ
 	return 0;
 }
 
