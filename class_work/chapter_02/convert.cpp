@@ -1,6 +1,6 @@
-// convert.cpp -- преобразует стоуны в фунты
+// convert.cpp -- РїСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃС‚РѕСѓРЅС‹ РІ С„СѓРЅС‚С‹
 #include <iostream>
-int stonetolb(int);	// прототип функции
+int stonetolb(int);	// РїСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё
 int main()
 {
 	using namespace std;
