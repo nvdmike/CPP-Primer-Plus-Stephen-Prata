@@ -13,7 +13,7 @@ int main() {
 	string copy;
 	string result;
 	cout << "Enter a string: ";
-	getline(cin, input);				// ввод строки
+	getline(cin, input);			// ввод строки
 	copy = input;
 	cout << "Your string is entered: " << input << endl;
 	result = version1(input, "***");	// отображение выведенной строки
