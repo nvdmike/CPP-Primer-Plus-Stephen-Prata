@@ -1,4 +1,4 @@
-// arrfun4.cpp -- функция с диапазоном массива
+// arrfun4.cpp -- С„СѓРЅРєС†РёСЏ СЃ РґРёР°РїР°Р·РѕРЅРѕРј РјР°СЃСЃРёРІР°
 #include <iostream>
 
 const int AR_SIZE = 8;
@@ -8,17 +8,17 @@ int sum_arr(const int *begin, const int *end);
 int main() {
 	using namespace std;
 	int cookies[AR_SIZE] = { 1, 2, 4, 8, 16, 32, 64, 128 };
-	// Некоторые системы требуют предварить int словом static,
-	// чтобы разрешить инициализацию массива
+	// РќРµРєРѕС‚РѕСЂС‹Рµ СЃРёСЃС‚РµРјС‹ С‚СЂРµР±СѓСЋС‚ РїСЂРµРґРІР°СЂРёС‚СЊ int СЃР»РѕРІРѕРј static,
+	// С‡С‚РѕР±С‹ СЂР°Р·СЂРµС€РёС‚СЊ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ РјР°СЃСЃРёРІР°
 	int sum = sum_arr(cookies, cookies + AR_SIZE);
 	cout << "Total cookies eaten: " << sum << endl;
-	sum = sum_arr(cookies, cookies + 3);		// три первых элемента
+	sum = sum_arr(cookies, cookies + 3);		// С‚СЂРё РїРµСЂРІС‹С… СЌР»РµРјРµРЅС‚Р°
 	cout << "First three eaters ate " << sum << " cookies.\n";
-	sum = sum_arr(cookies + 4, cookies + 8);	// четыре последних элемента
+	sum = sum_arr(cookies + 4, cookies + 8);	// С‡РµС‚С‹СЂРµ РїРѕСЃР»РµРґРЅРёС… СЌР»РµРјРµРЅС‚Р°
 	cout << "Last four eaters ate " << sum << " cookies.\n";
 	return 0;
 }
-// Возвращает сумму элементов целочисленного типа
+// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ СЌР»РµРјРµРЅС‚РѕРІ С†РµР»РѕС‡РёСЃР»РµРЅРЅРѕРіРѕ С‚РёРїР°
 int sum_arr(const int *begin, const int *end) {
 	const int *pt;
 	int total = 0;
