@@ -1,4 +1,4 @@
-// travel.cpp -- использование структур с функциями
+// travel.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃС‚СЂСѓРєС‚СѓСЂ СЃ С„СѓРЅРєС†РёСЏРјРё
 #include <iostream>
 
 struct travel_time {
@@ -13,13 +13,13 @@ void show_time(travel_time t);
 
 int main() {
 	using namespace std;
-	travel_time day1 = { 5, 45 };	// 5 часов 45 минут
-	travel_time day2 = { 4, 55 };	// 4 часов 55 минут
+	travel_time day1 = { 5, 45 };	// 5 С‡Р°СЃРѕРІ 45 РјРёРЅСѓС‚
+	travel_time day2 = { 4, 55 };	// 4 С‡Р°СЃРѕРІ 55 РјРёРЅСѓС‚
 	travel_time trip = sum(day1, day2);
-	cout << "Two-day total: ";		// итог за два дня
+	cout << "Two-day total: ";	// РёС‚РѕРі Р·Р° РґРІР° РґРЅСЏ
 	show_time(trip);
 	travel_time day3 = { 4, 32 };
-	cout << "Three-day total: ";	// итог за три дня
+	cout << "Three-day total: ";	// РёС‚РѕРі Р·Р° С‚СЂРё РґРЅСЏ
 	show_time(sum(trip, day3));
 	return 0;
 }
@@ -34,5 +34,5 @@ travel_time sum(travel_time t1, travel_time t2) {
 void show_time(travel_time t) {
 	using namespace std;
 	cout << t.hours << " hours, "
-		 << t.mins << " minutes.\n";	// часов, минут
+		 << t.mins << " minutes.\n";	// С‡Р°СЃРѕРІ, РјРёРЅСѓС‚
 }
