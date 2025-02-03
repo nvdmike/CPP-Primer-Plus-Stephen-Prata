@@ -1,4 +1,4 @@
-// filefunc.cpp -- функция с параметром ostream &
+// filefunc.cpp -- С„СѓРЅРєС†РёСЏ СЃ РїР°СЂР°РјРµС‚СЂРѕРј ostream &
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -14,16 +14,16 @@ int main() {
 	const char *fn = "ep-data.txt";
 	fout.open(fn);
 	if (!fout.is_open()) {
-		cout << "Can't open " << fn << ". Bye.\n";	// не удаётся открыть файл
+		cout << "Can't open " << fn << ". Bye.\n";	// РЅРµ СѓРґР°С‘С‚СЃСЏ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р»
 		exit(EXIT_FAILURE);
 	}
 	double objective;
-	// ввод фокусного расстояния объектива телескопа в мм
+	// РІРІРѕРґ С„РѕРєСѓСЃРЅРѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ РѕР±СЉРµРєС‚РёРІР° С‚РµР»РµСЃРєРѕРїР° РІ РјРј
 	cout << "Enter the focal lenght of your"
-			"telescope objective in mm: ";
+		"telescope objective in mm: ";
 	cin >> objective;
 	double eps[LIMIT];
-	// ввод фокусного расстояния окуляров в мм
+	// РІРІРѕРґ С„РѕРєСѓСЃРЅРѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ РѕРєСѓР»СЏСЂРѕРІ РІ РјРј
 	cout << "Enter the focal lenghts, in mm, of " << LIMIT << " eyepieces:\n";
 	for (int i = 0; i < LIMIT; ++i) {
 		cout << "Eyepiece #" << i + 1 << ": ";
@@ -37,20 +37,20 @@ int main() {
 
 void file_it(ostream &os, double fo, const double fe[], int n) {
 	ios_base::fmtflags initial;
-	initial = os.setf(ios_base::fixed);						// сохранение исходного состояния форматирования
+	initial = os.setf(ios_base::fixed);			// СЃРѕС…СЂР°РЅРµРЅРёРµ РёСЃС…РѕРґРЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёСЏ
 	os.precision(0);
-	os << "Focal lenght of objective: " << fo << " mm\n";	// фокусное расстояние объектива
+	os << "Focal lenght of objective: " << fo << " mm\n";	// С„РѕРєСѓСЃРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РѕР±СЉРµРєС‚РёРІР°
 	os.setf(ios::showpoint);
 	os.precision(1);
 	os.width(12);
 	os << "f.1. eyepiece";
 	os.width(15);
-	os << "magnification" << endl;							// коэффициент увеличения
+	os << "magnification" << endl;				// РєРѕСЌС„С„РёС†РёРµРЅС‚ СѓРІРµР»РёС‡РµРЅРёСЏ
 	for (int i = 0; i < n; ++i) {
 		os.width(12);
 		os << fe[i];
 		os.width(15);
 		os << int(fo / fe[i] + 0.5) << endl;
 	}
-	os.setf(initial);										// восстановление исходного состояние форматирования
+	os.setf(initial);					// РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РёСЃС…РѕРґРЅРѕРіРѕ СЃРѕСЃС‚РѕСЏРЅРёРµ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёСЏ
 }
