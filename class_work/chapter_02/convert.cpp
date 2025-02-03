@@ -1,8 +1,9 @@
 // convert.cpp -- преобразует стоуны в фунты
 #include <iostream>
+
 int stonetolb(int);	// прототип функции
-int main()
-{
+
+int main() {
 	using namespace std;
 	int stone;
 	cout << "Enter the weight in stone: ";
@@ -12,7 +13,7 @@ int main()
 	cout << pounds << " pounds." << endl;
 	return 0;
 }
-int stonetolb(int sts)
-{
+
+int stonetolb(int sts) {
 	return 14 * sts;
 }
