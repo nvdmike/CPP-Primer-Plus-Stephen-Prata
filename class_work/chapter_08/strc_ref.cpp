@@ -50,10 +50,10 @@ int main() {
 
 void display(const free_throws &ft) {
 	using std::cout;
-	cout << "Name: " << ft.name << '\n';			// вывод члена name
-	cout << "Made: " << ft.made << '\t';			// вывод члена made
+	cout << "Name: " << ft.name << '\n';		// вывод члена name
+	cout << "Made: " << ft.made << '\t';		// вывод члена made
 	cout << "Attempts: " << ft.attempts << '\t';	// вывод члена attempts
-	cout << "Percent: " << ft.percent << '\n';		// вывод члена percent
+	cout << "Percent: " << ft.percent << '\n';	// вывод члена percent
 }
 
 void set_pc(free_throws& ft) {
