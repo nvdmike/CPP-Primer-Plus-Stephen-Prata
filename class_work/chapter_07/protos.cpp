@@ -1,19 +1,19 @@
-// protos.cpp -- использование прототипов и вызовы функций
+// protos.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїСЂРѕС‚РѕС‚РёРїРѕРІ Рё РІС‹Р·РѕРІС‹ С„СѓРЅРєС†РёР№
 #include <iostream>
 
-void cheers(int);		// прототип: нет значения возврата
-double cube(double x);	// прототип: возвращает double
+void cheers(int);	// РїСЂРѕС‚РѕС‚РёРї: РЅРµС‚ Р·РЅР°С‡РµРЅРёСЏ РІРѕР·РІСЂР°С‚Р°
+double cube(double x);	// РїСЂРѕС‚РѕС‚РёРї: РІРѕР·РІСЂР°С‰Р°РµС‚ double
 
 int main() {
 	using namespace std;
-	cheers(5);					// вызов функции
+	cheers(5);			// РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё
 	cout << "Give me a number: ";
 	double side;
 	cin >> side;
-	double volume = cube(side);	// вызов функции
+	double volume = cube(side);	// РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё
 	cout << "A " << side << "-foot cube has volume of ";
 	cout << volume << " cubic feet.\n";
-	cheers(cube(2));			// защита прототипа в действии
+	cheers(cube(2));		// Р·Р°С‰РёС‚Р° РїСЂРѕС‚РѕС‚РёРїР° РІ РґРµР№СЃС‚РІРёРё
 	return 0;
 }
 
