@@ -1,20 +1,20 @@
-// secref.cpp -- определение и использование ссылки
+// secref.cpp -- РѕРїСЂРµРґРµР»РµРЅРёРµ Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃСЃС‹Р»РєРё
 #include <iostream>
 
 int main() {
 	using namespace std;
 	int rats = 101;
-	int &rodents = rats;								// rodents - это ссылка
+	int &rodents = rats;								// rodents - СЌС‚Рѕ СЃСЃС‹Р»РєР°
 	cout << "rats = " << rats;
 	cout << ", rodents = " << rodents << endl;
 	cout << "rats address = " << &rats;
-	cout << ", rodents address = " << &rodents << endl;	// вывод адресов rats и rodents
+	cout << ", rodents address = " << &rodents << endl;	// РІС‹РІРѕРґ Р°РґСЂРµСЃРѕРІ rats Рё rodents
 	int bunnies = 50;
-	rodents = bunnies;									// можно ли изменить ссылку?
+	rodents = bunnies;									// РјРѕР¶РЅРѕ Р»Рё РёР·РјРµРЅРёС‚СЊ СЃСЃС‹Р»РєСѓ?
 	cout << "bunnies = " << bunnies;
 	cout << ", rats = " << rats;
 	cout << ", rodents = " << rodents << endl;
 	cout << "bunnies address = " << &bunnies;
-	cout << ", rodents address = " << &rodents << endl;	// вывод адресов bunnies и rodents
+	cout << ", rodents address = " << &rodents << endl;	// РІС‹РІРѕРґ Р°РґСЂРµСЃРѕРІ bunnies Рё rodents
 	return 0;
 }
