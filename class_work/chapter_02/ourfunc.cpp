@@ -1,21 +1,21 @@
-// ourfunc.cpp -- определение собственной функции
+// ourfunc.cpp -- РѕРїСЂРµРґРµР»РµРЅРёРµ СЃРѕР±СЃС‚РІРµРЅРЅРѕР№ С„СѓРЅРєС†РёРё
 #include <iostream>
-void simon(int);	// прототип функции simon()
+void simon(int);	// РїСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё simon()
 
 int main()
 {
 	using namespace std;
-	simon(3);		// вызов функции simon()
+	simon(3);		// РІС‹Р·РѕРІ С„СѓРЅРєС†РёРё simon()
 	cout << "Pick an integer: ";
 	int count;
 	cin >> count;
-	simon(count);	// ещё один вызов simon()
+	simon(count);	// РµС‰С‘ РѕРґРёРЅ РІС‹Р·РѕРІ simon()
 	cout << "Done!" << endl;
 	return 0;
 }
 
-void simon(int n)	// определение функции simon()
+void simon(int n)	// РѕРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё simon()
 {
 	using namespace std;
 	cout << "Simon says touch your toes " << n << " times." << endl;
-}	// функции void не требуют операторов return
+}	// С„СѓРЅРєС†РёРё void РЅРµ С‚СЂРµР±СѓСЋС‚ РѕРїРµСЂР°С‚РѕСЂРѕРІ return
