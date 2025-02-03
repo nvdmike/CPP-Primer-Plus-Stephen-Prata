@@ -1,39 +1,39 @@
-// strquote.cpp -- ðàçëè÷íûå ðåøåíèÿ
+// strquote.cpp -- различные решения
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 string version1(const string &s1, const string &s2);
-const string &version2(string &s1, const string &s2);	// èìååò ïîáî÷íûé ýôôåêò
-const string &version3(string &s1, const string &s2);	// íåóäà÷íîå ðåøåíèå
+const string &version2(string &s1, const string &s2);	// имеет побочный эффект
+const string &version3(string &s1, const string &s2);	// неудачное решение
 
 int main() {
 	string input;
 	string copy;
 	string result;
 	cout << "Enter a string: ";
-	getline(cin, input);				// ââîä ñòðîêè
+	getline(cin, input);				// ввод строки
 	copy = input;
 	cout << "Your string is entered: " << input << endl;
-	result = version1(input, "***");	// îòîáðàæåíèå âûâåäåííîé ñòðîêè
+	result = version1(input, "***");	// отображение выведенной строки
 	cout << "Your string enhanced: " << result << endl;
-		// âûâîä ðàñøèðåííîé ñòðîêè
+		// вывод расширенной строки
 	cout << "Your original string: " << input << endl;
-		// âûâîä èñõîäíîé ñòðîêè
+		// вывод исходной строки
 	result = version2(input, "###");
 	cout << "Your string enhanced: " << result << endl;
-		// âûâîä ðàñøèðåííîé ñòðîêè
+		// вывод расширенной строки
 	cout << "Your original string: " << input << endl;
-		// âûâîä èñõîäíîé ñòðîêè
+		// вывод исходной строки
 	cout << "Resetting original string.\n";
-		// âîññòàíîâëåíèå èñõîäíîé ñòðîêè
+		// восстановление исходной строки
 	input = copy;
 	result = version3(input, "@@@");
 	cout << "Your string enhanced: " << result << endl;
-		// âûâîä ðàñøèðåííîé ñòðîêè
+		// вывод расширенной строки
 	cout << "Your original string: " << input << endl;
-		// âûâîä èñõîäíîé ñòðîêè
+		// вывод исходной строки
 	return 0;
 }
 
@@ -43,15 +43,15 @@ string version1(const string &s1, const string &s2) {
 	return temp;
 }
 
-const string &version2(string &s1, const string &s2) {	// èìååò ïîáî÷íûé ýôôåêò
+const string &version2(string &s1, const string &s2) {	// имеет побочный эффект
 	s1 = s2 + s1 + s2;
-	// âîçâðàò ññûëêè, ïåðåäííîé ôóíêöèè áåçîïàñåí
+	// возврат ссылки, переднной функции безопасен
 	return s1;
 }
 
-const string &version3(string &s1, const string &s2) {	// íåóäà÷íîå ðåøåíèå
+const string &version3(string &s1, const string &s2) {	// неудачное решение
 	string temp;
 	temp = s2 + s1 + s2;
-	//	âîçâðàò ññûëêè íà ëîêàëüíóþ ïåðåìåííóþ íåáåçîïàñåí
+	//	возврат ссылки на локальную переменную небезопасен
 	return temp;
 }
