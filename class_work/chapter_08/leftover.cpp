@@ -1,4 +1,4 @@
-// leftover.cpp -- перегрузка функции left()
+// leftover.cpp -- РїРµСЂРµРіСЂСѓР·РєР° С„СѓРЅРєС†РёРё left()
 #include <iostream>
 
 unsigned long left(unsigned long num, unsigned ct);
@@ -6,45 +6,45 @@ char *left(const char *str, int n = 1);
 
 int main() {
 	using namespace std;
-	const char *trip = "Hawaii!!";	// тестовое значение
-	unsigned long n = 12345678;		// тестовое значение
+	const char *trip = "Hawaii!!";	// С‚РµСЃС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+	unsigned long n = 12345678;	// С‚РµСЃС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	int i;
 	char *temp;
 	for (i = 1; i < 10; ++i) {
 		cout << left(n, i) << endl;
 		temp = left(trip, i);
 		cout << temp << endl;
-		delete[] temp;				// указатель на временную область хранения
+		delete[] temp;		// СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІСЂРµРјРµРЅРЅСѓСЋ РѕР±Р»Р°СЃС‚СЊ С…СЂР°РЅРµРЅРёВ¤
 	}
 	return 0;
 }
 
-// возвращает первых ct цифр числа num
+// РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹С… ct С†РёС„СЂ С‡РёСЃР»Р° num
 unsigned long left(unsigned long num, unsigned ct) {
 	unsigned digits = 1;
 	unsigned long n = num;
 	if (ct == 0 || num == 0)
-		return 0;	// возврат 0 в случае отсутствия цифр
+		return 0;	// РІРѕР·РІСЂР°С‚ 0 РІ СЃР»СѓС‡Р°Рµ РѕС‚СЃСѓС‚СЃС‚РІРёВ¤ С†РёС„СЂ
 	while (n /= 10)
 		digits++;
 	if (digits > ct) {
 		ct = digits - ct;
 		while (ct--)
 			num /= 10;
-		return num;	// возврат ct знаков слева
-	} else			// если ct >= количества цифр
-		return num;	// возврат числа целиком
+		return num;	// РІРѕР·РІСЂР°С‚ ct Р·РЅР°РєРѕРІ СЃР»РµРІР°
+	} else			// РµСЃР»Рё ct >= РєРѕР»РёС‡РµСЃС‚РІР° С†РёС„СЂ
+		return num;	// РІРѕР·РІСЂР°С‚ С‡РёСЃР»Р° С†РµР»РёРєРѕРј
 }
-// возвращает указатель на новую строку, состояющую
-// из n первых символов строки str
+// РІРѕР·РІСЂР°С‰Р°РµС‚ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ, СЃРѕСЃС‚РѕВ¤СЋС‰СѓСЋ
+// РёР· n РїРµСЂРІС‹С… СЃРёРјРІРѕР»РѕРІ СЃС‚СЂРѕРєРё str
 char *left(const char *str, int n) {
 	if (n < 0)
 		n = 0;
 	char *p = new char[n + 1];
 	int i;
 	for (i = 0; i < n && str[i]; ++i)
-		p[i] = str[i];	// копирование символов
+		p[i] = str[i];	// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРёРјРІРѕР»РѕРІ
 	while (i <= n)
-		p[i++] = '\0';	// установка остальных символов строки в '\0'
+		p[i++] = '\0';	// СѓСЃС‚Р°РЅРѕРІРєР° РѕСЃС‚Р°Р»СЊРЅС‹С… СЃРёРјРІРѕР»РѕРІ СЃС‚СЂРѕРєРё РІ '\0'
 	return p;
 }
