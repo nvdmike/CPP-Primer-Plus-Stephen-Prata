@@ -1,4 +1,4 @@
-// topfive.cpp -- обработка массива объектов string
+// topfive.cpp -- РѕР±СЂР°Р±РѕС‚РєР° РјР°СЃСЃРёРІР° РѕР±СЉРµРєС‚РѕРІ string
 #include <iostream>
 #include <string>
 
@@ -9,14 +9,14 @@ const int SIZE = 5;
 void display(const string sa[], int n);
 
 int main() {
-	string list[SIZE];		// массив из 5 объектов string
+	string list[SIZE];	// РјР°СЃСЃРёРІ РёР· 5 РѕР±СЉРµРєС‚РѕРІ string
 	cout << "Enter your " << SIZE << " favorit astronomical sights:\n";
-		// ввод астрономических объектов
+		// РІРІРѕРґ Р°СЃС‚СЂРѕРЅРѕРјРёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ
 	for (int i = 0; i < SIZE; ++i) {
 		cout << i + 1 << ": ";
 		getline(cin, list[i]);
 	}
-	cout << "Your list:\n";	// вывод списка астрономических объектов
+	cout << "Your list:\n";	// РІС‹РІРѕРґ СЃРїРёСЃРєР° Р°СЃС‚СЂРѕРЅРѕРјРёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ
 	display(list, SIZE);
 	return 0;
 }
