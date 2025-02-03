@@ -1,7 +1,7 @@
 // getinfo.cpp -- ввод и вывод
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	int carrots;
 	cout << "How many carrots do yo have?" << endl;
