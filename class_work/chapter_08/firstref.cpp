@@ -1,17 +1,17 @@
-// firstref.cpp -- определение и использование ссылки
+// firstref.cpp -- РѕРїСЂРµРґРµР»РµРЅРёРµ Рё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃСЃС‹Р»РєРё
 #include <iostream>
 
 int main() {
 	using namespace std;
 	int rats = 101;
-	int &rodents = rats;	// rodents является ссылкой
+	int &rodents = rats;	// rodents СЏРІР»СЏРµС‚СЃСЏ СЃСЃС‹Р»РєРѕР№
 	cout << "rats = " << rats;
 	cout << ", rodents = " << rodents << endl;
 	rodents++;
 	cout << "rats = " << rats;
 	cout << ", rodents = " << rodents << endl;
-	// некоторые реализации требуют для следующих адресов
-	// выполнить приведение к типу unsigned
+	// РЅРµРєРѕС‚РѕСЂС‹Рµ СЂРµР°Р»РёР·Р°С†РёРё С‚СЂРµР±СѓСЋС‚ РґР»СЏ СЃР»РµРґСѓСЋС‰РёС… Р°РґСЂРµСЃРѕРІ
+	// РІС‹РїРѕР»РЅРёС‚СЊ РїСЂРёРІРµРґРµРЅРёРµ Рє С‚РёРїСѓ unsigned
 	cout << "rats address = " << &rats;
 	cout << ", rodents address = " << &rodents << endl;
 	return 0;
