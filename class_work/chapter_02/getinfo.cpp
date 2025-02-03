@@ -1,14 +1,14 @@
-// getinfo.cpp -- ввод и вывод
+// getinfo.cpp -- РІРІРѕРґ Рё РІС‹РІРѕРґ
 #include <iostream>
 int main()
 {
 	using namespace std;
 	int carrots;
 	cout << "How many carrots do yo have?" << endl;
-	cin >> carrots;	// ввод C++
+	cin >> carrots;	// РІРІРѕРґ C++
 	cout << "Here are two more. ";
 	carrots = carrots + 2;
-	// следующая строка выполняет конкатенацию вывода
+	// СЃР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂРѕРєР° РІС‹РїРѕР»РЅСЏРµС‚ РєРѕРЅРєР°С‚РµРЅР°С†РёСЋ РІС‹РІРѕРґР°
 	cout << "Now you have " << carrots << " carrots." << endl;
 	return 0;
 }
