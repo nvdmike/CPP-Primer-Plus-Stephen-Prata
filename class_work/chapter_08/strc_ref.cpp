@@ -1,4 +1,4 @@
-// strc_ref.cpp -- использование ссылок на структуру
+// strc_ref.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃСЃС‹Р»РѕРє РЅР° СЃС‚СЂСѓРєС‚СѓСЂСѓ
 #include <iostream>
 #include <string>
 
@@ -14,35 +14,35 @@ void set_pc(free_throws &ft);
 free_throws &accumulate(free_throws &target, const free_throws &source);
 
 int main() {
-	// частичные инициализации - оставшиеся неинициализированными
-	// члены устанвливаются в 0
+	// С‡Р°СЃС‚РёС‡РЅС‹Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё - РѕСЃС‚Р°РІС€РёРµСЃСЏ РЅРµРёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹РјРё
+	// С‡Р»РµРЅС‹ СѓСЃС‚Р°РЅРІР»РёРІР°СЋС‚СЃСЏ РІ 0
 	free_throws one = { "Ifelsa Branch", 13, 14 };
 	free_throws two = { "Andor Knott", 10, 16 };
 	free_throws three = { "Minnie Max", 7, 9 };
 	free_throws four = { "Whily Looper", 5, 9 };
 	free_throws five = { "Long Long", 6, 14 };
 	free_throws team = { "Throwgoods", 0, 0 };
-	// иницаилизация не производится
+	// РёРЅРёС†Р°РёР»РёР·Р°С†РёСЏ РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ
 	free_throws dup;
 	set_pc(one);
 	display(one);
 	accumulate(team, one);
 	display(team);
-	// использование возвращаемого значения в качестве аргумента
+	// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РІРѕР·РІСЂР°С‰Р°РµРјРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РІ РєР°С‡РµСЃС‚РІРµ Р°СЂРіСѓРјРµРЅС‚Р°
 	display(accumulate(team, two));
 	accumulate(accumulate(team, three), four);
 	display(team);
-	// использование возвращаемого значения в присваивании
+	// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РІРѕР·РІСЂР°С‰Р°РµРјРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РІ РїСЂРёСЃРІР°РёРІР°РЅРёРё
 	dup = accumulate(team, five);
 	std::cout << "Displaying team:\n";
 	display(team);
-	// отображение dup после присваивания
+	// РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ dup РїРѕСЃР»Рµ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	std::cout << "Displaying dup after assignment:\n";
 	display(dup);
 	set_pc(four);
-	// неблагоразумное присваивание
+	// РЅРµР±Р»Р°РіРѕСЂР°Р·СѓРјРЅРѕРµ РїСЂРёСЃРІР°РёРІР°РЅРёРµ
 	accumulate(dup, five) = four;
-	// отображение dup после неблагоразумного присваивания
+	// РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ dup РїРѕСЃР»Рµ РЅРµР±Р»Р°РіРѕСЂР°Р·СѓРјРЅРѕРіРѕ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	std::cout << "Displaying dup after ill-advised assignment:\n";
 	display(dup);
 	return 0;
@@ -50,10 +50,10 @@ int main() {
 
 void display(const free_throws &ft) {
 	using std::cout;
-	cout << "Name: " << ft.name << '\n';			// вывод члена name
-	cout << "Made: " << ft.made << '\t';			// вывод члена made
-	cout << "Attempts: " << ft.attempts << '\t';	// вывод члена attempts
-	cout << "Percent: " << ft.percent << '\n';		// вывод члена percent
+	cout << "Name: " << ft.name << '\n';			// РІС‹РІРѕРґ С‡Р»РµРЅР° name
+	cout << "Made: " << ft.made << '\t';			// РІС‹РІРѕРґ С‡Р»РµРЅР° made
+	cout << "Attempts: " << ft.attempts << '\t';	// РІС‹РІРѕРґ С‡Р»РµРЅР° attempts
+	cout << "Percent: " << ft.percent << '\n';		// РІС‹РІРѕРґ С‡Р»РµРЅР° percent
 }
 
 void set_pc(free_throws& ft) {
