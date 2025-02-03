@@ -1,10 +1,10 @@
-// recur.cpp -- использование рекурсии
+// recur.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЂРµРєСѓСЂСЃРёРё
 #include <iostream>
 
 void countdown(int n);
 
 int main() {
-	countdown(4);	// вызов рекурсивной функции
+	countdown(4);	// РІС‹Р·РѕРІ СЂРµРєСѓСЂСЃРёРІРЅРѕР№ С„СѓРЅРєС†РёРё
 	return 0;
 }
 
@@ -12,7 +12,7 @@ void countdown(int n) {
 	using namespace std;
 	cout << "Counting down ... " << n << " (n at " << &n << ")" << endl;
 	if (n > 0)
-		countdown(n - 1);	// функция вызывает сама себя
+		countdown(n - 1);	// С„СѓРЅРєС†РёСЏ РІС‹Р·С‹РІР°РµС‚ СЃР°РјР° СЃРµР±СЏ
 	//cout << n << ": Kaboom!\n";
 	cout << n << ": Kaboom!" << n << " (n at " << &n << ")" << endl;
 }
