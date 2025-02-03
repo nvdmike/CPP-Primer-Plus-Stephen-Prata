@@ -1,27 +1,27 @@
-// strgfun.cpp -- функция со строковым аргументом
+// strgfun.cpp -- С„СѓРЅРєС†РёСЏ СЃРѕ СЃС‚СЂРѕРєРѕРІС‹Рј Р°СЂРіСѓРјРµРЅС‚РѕРј
 #include <iostream>
 
 unsigned int c_in_str(const char* str, char ch);
 
 int main() {
 	using namespace std;
-	char mmm[15] = "minimum";		// строка в массиве
-	// Некоторые системы требуют предварить char словом static,
-	// чтобы разрешить инициализацию массива
-	const char* wail = "ululate";	// wail указывает на строку
+	char mmm[15] = "minimum";				// СЃС‚СЂРѕРєР° РІ РјР°СЃСЃРёРІРµ
+	// РќРµРєРѕС‚РѕСЂС‹Рµ СЃРёСЃС‚РµРјС‹ С‚СЂРµР±СѓСЋС‚ РїСЂРµРґРІР°СЂРёС‚СЊ char СЃР»РѕРІРѕРј static,
+	// С‡С‚РѕР±С‹ СЂР°Р·СЂРµС€РёС‚СЊ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ РјР°СЃСЃРёРІР°
+	const char* wail = "ululate";				// wail СѓРєР°Р·С‹РІР°РµС‚ РЅР° СЃС‚СЂРѕРєСѓ
 	unsigned int ms = c_in_str(mmm, 'm');
 	unsigned int us = c_in_str(wail, 'u');
-	cout << ms << " m characters in " << mmm << endl;	// вывод количества символов m
-	cout << us << " u characters in " << wail << endl;	// вывод количества символов u
+	cout << ms << " m characters in " << mmm << endl;	// РІС‹РІРѕРґ РєРѕР»РёС‡РµСЃС‚РІР° СЃРёРјРІРѕР»РѕРІ m
+	cout << us << " u characters in " << wail << endl;	// РІС‹РІРѕРґ РєРѕР»РёС‡РµСЃС‚РІР° СЃРёРјРІРѕР»РѕРІ u
 	return 0;
 }
-// Эта функция подсчитывает количество символов ch в строке str
+// Р­С‚Р° С„СѓРЅРєС†РёСЏ РїРѕРґСЃС‡РёС‚С‹РІР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ ch РІ СЃС‚СЂРѕРєРµ str
 unsigned int c_in_str(const char* str, char ch) {
 	unsigned int count = 0;
 	while (*str) {
 		if (*str == ch)
 			count++;
-		str++;	// перемещение указателя на следующий символ
+		str++;	// РїРµСЂРµРјРµС‰РµРЅРёРµ СѓРєР°Р·Р°С‚РµР»СЏ РЅР° СЃР»РµРґСѓСЋС‰РёР№ СЃРёРјРІРѕР»
 	}
 	return count;
 }
