@@ -1,24 +1,19 @@
-// pointer.cpp -- наша первая переменная-указатель
+// pointer.cpp -- РЅР°С€Р° РїРµСЂРІР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ-СѓРєР°Р·Р°С‚РµР»СЊ
 #include <iostream>
-int main()
-{
-	using namespace std;
-	int updates = 6;		// объявление переменной
-	int * p_updates;			// объявление указателя на int
 
-	p_updates = &updates;	// присвоить адрес int указателю
-	
-	// Выразить значения двумя способами
+int main() {
+	using namespace std;
+	int updates = 6;	// РѕР±СЉВ¤РІР»РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№
+	int * p_updates;	// РѕР±СЉВ¤РІР»РµРЅРёРµ СѓРєР°Р·Р°С‚РµР»В¤ РЅР° int
+	p_updates = &updates;	// РїСЂРёСЃРІРѕРёС‚СЊ Р°РґСЂРµСЃ int СѓРєР°Р·Р°С‚РµР»СЋ
+	// РІС‹СЂР°Р·РёС‚СЊ Р·РЅР°С‡РµРЅРёВ¤ РґРІСѓРјСЏ СЃРїРѕСЃРѕР±Р°РјРё
 	cout << "Values: updates = " << updates;
 	cout << ", *p_updates = " << *p_updates << endl;
-
-	// Выразить адреса двумя способами
+	// РІС‹СЂР°Р·РёС‚СЊ Р°РґСЂРµСЃР° РґРІСѓРјВ¤ СЃРїРѕСЃРѕР±Р°РјРё
 	cout << "Addresses: &updates = " << &updates;
 	cout << ", p_updates = " << p_updates << endl;
-
-	// Изменить значение через указатель
+	// РёР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ С‡РµСЂРµР· СѓРєР°Р·Р°С‚РµР»СЊ
 	*p_updates = *p_updates + 1;
 	cout << "Now updates = " << updates << endl;
-
 	return 0;
 }
