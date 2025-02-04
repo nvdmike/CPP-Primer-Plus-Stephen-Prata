@@ -1,10 +1,9 @@
-// chartype.cpp -- тип char
+// chartype.cpp -- С‚РёРї char
 #include <iostream>
-int main()
-{
-	using namespace std;
-	char ch;	// объявление перменной char
 
+int main() {
+	using namespace std;
+	char ch;	// РѕР±СЉСЏРІР»РµРЅРёРµ РїРµСЂРјРµРЅРЅРѕР№ char
 	cout << "Enter a character:" << endl;
 	cin >> ch;
 	cout << "Hola! ";
