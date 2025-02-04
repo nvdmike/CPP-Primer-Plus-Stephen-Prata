@@ -1,30 +1,29 @@
-// strtype4.cpp --  строки с пробелами
+// strtype4.cpp --  СЃС‚СЂРѕРєРё СЃ РїСЂРѕР±РµР»Р°РјРё
 #include <iostream>
-#include <string>	// обеспечение доступа к классу string
-#include <cstring>	// библиотека обработки строк в стиле C
-int main()
-{
+#include <string>	// РѕР±РµСЃРїРµС‡РµРЅРёРµ РґРѕСЃС‚СѓРїР° Рє РєР»Р°СЃСЃСѓ string
+#include <cstring>	// Р±РёР±Р»РёРѕС‚РµРєР° РѕР±СЂР°Р±РѕС‚РєРё СЃС‚СЂРѕРє РІ СЃС‚РёР»Рµ C
+
+int main() {
 	using namespace std;
 	char charr[20];
 	string str;
-
-	// Длина строки в charr перед вводом
+	// РґР»РёРЅР° СЃС‚СЂРѕРєРё РІ charr РїРµСЂРµРґ РІРІРѕРґРѕРј
 	cout << "Lenght of string in charr before input: "
-		 << strlen(charr) << endl;
-	// Длина строки в string перед вводом
+	     << strlen(charr) << endl;
+	// РґР»РёРЅР° СЃС‚СЂРѕРєРё РІ string РїРµСЂРµРґ РІРІРѕРґРѕРј
 	cout << "Lenght of string in str before input: "
-		 << str.size() << endl;
-	cout << "Enter a line of text:\n";			// ввод строки текста
-	cin.getline(charr, 20);						// указание максимальной длины
+	     << str.size() << endl;
+	cout << "Enter a line of text:\n";		// РІРІРѕРґ СЃС‚СЂРѕРєРё С‚РµРєСЃС‚Р°
+	cin.getline(charr, 20);				// СѓРєР°Р·Р°РЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РґР»РёРЅС‹
 	cout << "You entered: " << charr << endl;
-	cout << "Enter another line of text:\n";	// ввод другой строки текста
-	getline(cin, str);	// теперь cin - аргумент; спецификатор длины отсутствует
+	cout << "Enter another line of text:\n";	// РІРІРѕРґ РґСЂСѓРіРѕР№ СЃС‚СЂРѕРєРё С‚РµРєСЃС‚Р°
+	getline(cin, str);				// С‚РµРїРµСЂСЊ cin - Р°СЂРіСѓРјРµРЅС‚; СЃРїРµС†РёС„РёРєР°С‚РѕСЂ РґР»РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚
 	cout << "You entered: " << str << endl;
-	// Длина строки в charr после ввода
+	// РґР»РёРЅР° СЃС‚СЂРѕРєРё РІ charr РїРѕСЃР»Рµ РІРІРѕРґР°
 	cout << "Lenght of string in charr after input: "
-		<< strlen(charr) << endl;
-	// Длина строки в string после ввода
+	     << strlen(charr) << endl;
+	// РґР»РёРЅР° СЃС‚СЂРѕРєРё РІ string РїРѕСЃР»Рµ РІРІРѕРґР°
 	cout << "Lenght of string in str after input: "
-		<< str.size() << endl;
+	     << str.size() << endl;
 	return 0;
 }
