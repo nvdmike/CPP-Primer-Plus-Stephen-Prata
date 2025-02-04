@@ -1,23 +1,20 @@
-// morechar.cpp -- сравнение типов char и int
+// morechar.cpp -- СЃСЂР°РІРЅРµРЅРёРµ С‚РёРїРѕРІ char Рё int
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	char ch = 'M';	// присваивает ch код ASCII символа M
-	int i = ch;		// сохраняет этот же код в int
+	char ch = 'M';	// РїСЂРёСЃРІР°РёРІР°РµС‚ ch РєРѕРґ ASCII СЃРёРјРІРѕР»Р° M
+	int i = ch;	// СЃРѕС…СЂР°РЅСЏРµС‚ СЌС‚РѕС‚ Р¶Рµ РєРѕРґ РІ int
 	cout << "The ASCII code for " << ch << " is " << i << endl;
-
 	cout << "Add one to the character code:" << endl;
-	ch = ch + 1;	// изменяет код символа в ch
-	i = ch;			// сохраняет код нового символа в i
+	ch = ch + 1;	// РёР·РјРµРЅСЏРµС‚ РєРѕРґ СЃРёРјРІРѕР»Р° РІ ch
+	i = ch;		// СЃРѕС…СЂР°РЅСЏРµС‚ РєРѕРґ РЅРѕРІРѕРіРѕ СЃРёРјРІРѕР»Р° РІ i
 	cout << "The ASCII code for " << ch << " is " << i << endl;
-
-	// Использование функции-члена cout.put() для отображения символа
+	// РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° cout.put() РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРёРјРІРѕР»Р°
 	cout << "Displaying char ch using cout.put(ch): ";
 	cout.put(ch);
-	// Использование cout.put() для отображения символьной константы
+	// РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ cout.put() РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРёРјРІРѕР»СЊРЅРѕР№ РєРѕРЅСЃС‚Р°РЅС‚С‹
 	cout.put('!');
-
 	cout << endl << "Done" << endl;
 	return 0;
 }
