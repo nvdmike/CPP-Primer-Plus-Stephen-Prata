@@ -1,17 +1,15 @@
-// arrayone.cpp -- небольшие массивы чисел
+// arrayone.cpp -- РЅРµР±РѕР»СЊС€РёРµ РјР°СЃСЃРёРІС‹ С‡РёСЃРµР»
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	int yams[3];						// создание массива из трех элементов
-	yams[0] = 7;						// присваивание значение первому элементу
+	int yams[3];						// СЃРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР° РёР· С‚СЂРµС… СЌР»РµРјРµРЅС‚РѕРІ
+	yams[0] = 7;						// РїСЂРёСЃРІР°РёРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ
 	yams[1] = 8;
 	yams[2] = 6;
-
-	int yamcosts[3] = { 20, 30, 5 };	// создание и инициализация массива
-	// Примечание. Если ваш компилятор C++ не может инициализировать
-	// этот массив, используйте static int yamcosts[3] вместо int yamcosts[3]
-
+	int yamcosts[3] = { 20, 30, 5 };			// СЃРѕР·РґР°РЅРёРµ Рё РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР°
+	// РџСЂРёРјРµС‡Р°РЅРёРµ. Р•СЃР»Рё РІР°С€ РєРѕРјРїРёР»СЏС‚РѕСЂ C++ РЅРµ РјРѕР¶РµС‚ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ
+	// СЌС‚РѕС‚ РјР°СЃСЃРёРІ, РёСЃРїРѕР»СЊР·СѓР№С‚Рµ static int yamcosts[3] РІРјРµСЃС‚Рѕ int yamcosts[3]
 	cout << "Total yams = ";
 	cout << yams[0] + yams[1] + yams[2] << endl;
 	cout << "The package with " << yams[1] << " yams costs ";
@@ -19,7 +17,6 @@ int main()
 	int total = yams[0] * yamcosts[0] + yams[1] * yamcosts[1];
 	total = total + yams[2] * yamcosts[2];
 	cout << "The total yam expense is " << total << " cents.\n";
-
 	cout << "\nSize of yams array = " << sizeof yams;
 	cout << " bytes.\n";
 	cout << "Size of one element = " << sizeof yams[0];
