@@ -1,22 +1,21 @@
-// block.cpp -- использование блока
+// block.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р±Р»РѕРєР°
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	cout << "the amazing accounto will sum and average: ";
 	cout << "five numbers for you.\n";
 	cout << "please enter five values:\n";
 	double number;
 	double sum = 0.0;
-	for (int i = 1; i <= 5; i++)
-	{												// начало блока
-		cout << "Value " << i << ": ";				// ввод числа
+	for (int i = 1; i <= 5; i++) {			// РЅР°С‡Р°Р»Рѕ Р±Р»РѕРєР°
+		cout << "Value " << i << ": ";		// РІРІРѕРґ С‡РёСЃР»Р°
 		cin >> number;
 		sum += number;
-	}												// конец блока
+	}						// РєРѕРЅРµС† Р±Р»РѕРєР°
 	cout << "Five exquisite chiuces indeed! ";
-	cout << "They sum tp " << sum << endl;			// вывод суммы
-	cout << "and aferage to " << sum / 5 << ".\n";	// вывод среднего значения
+	cout << "They sum tp " << sum << endl;		// РІС‹РІРѕРґ СЃСѓРјРјС‹
+	cout << "and aferage to " << sum / 5 << ".\n";	// РІС‹РІРѕРґ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ
 	cout << "The Amazing Accounto bids you adieu!\n";
 	return 0;
 }
