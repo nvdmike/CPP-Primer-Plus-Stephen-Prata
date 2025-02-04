@@ -8,10 +8,10 @@ char *getname(void);	// прототип функции
 int main() {
 	char *name;		// создание указателя, но без хранилища
 	name = getname();	// присваивание name адреса строки
-	cout << name << " at " << (int*)name << "\n";
+	cout << name << " at " << (int *)name << "\n";
 	delete[] name;		// освобождение памяти
 	name = getname();	// повторное использование освобождённой памяти
-	cout << name << " at " << (int*)name << "\n";
+	cout << name << " at " << (int *)name << "\n";
 	delete[] name;		// снова освобождение памяти
 	return 0;
 }
