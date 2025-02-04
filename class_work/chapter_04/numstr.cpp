@@ -1,19 +1,19 @@
-// numstr.cpp -- строковый ввод после числового
+// numstr.cpp -- СЃС‚СЂРѕРєРѕРІС‹Р№ РІРІРѕРґ РїРѕСЃР»Рµ С‡РёСЃР»РѕРІРѕРіРѕ
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	cout << "What year was your house built?\n";	// ввод года постройки дома
+	cout << "What year was your house built?\n";	// РІРІРѕРґ РіРѕРґР° РїРѕСЃС‚СЂРѕР№РєРё РґРѕРјР°
 	int year;
 	cin >> year;
-	// Можно исправить ошибку, используя один из следующи вариантов:
-	// 1. cin.get(); // или cin.get(ch);
-	// 2. (cin >> year).get(); // или (cin >> year).get(ср);
-	cout << "What is its street address?\n";		// ввод адреса
+	// С›РѕР¶РЅРѕ РёСЃРїСЂР°РІРёС‚СЊ РѕС€РёР±РєСѓ, РёСЃРїРѕР»СЊР·СѓВ¤ РѕРґРёРЅ РёР· СЃР»РµРґСѓСЋС‰Рё РІР°СЂРёР°РЅС‚РѕРІ:
+	// 1. cin.get(); // РёР»Рё cin.get(ch);
+	// 2. (cin >> year).get(); // РёР»Рё (cin >> year).get(СЃСЂ);
+	cout << "What is its street address?\n";	// РІРІРѕРґ Р°РґСЂРµСЃР°
 	char address[80];
 	cin.getline(address, 80);
-	cout << "Year built: " << year << endl;			// вывод года постройки
-	cout << "Address: " << address << endl;			// вывод адреса
+	cout << "Year built: " << year << endl;		// РІС‹РІРѕРґ РіРѕРґР° РїРѕСЃС‚СЂРѕР№РєРё
+	cout << "Address: " << address << endl;		// РІС‹РІРѕРґ Р°РґСЂРµСЃР°
 	cout << "Done!\n";
 	return 0;
 }
