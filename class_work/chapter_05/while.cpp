@@ -1,21 +1,19 @@
-// while.cpp -- представление цикла while
+// while.cpp -- РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С†РёРєР»Р° while
 #include <iostream>
-const int ArSize = 20;
-int main()
-{
-	using namespace std;
-	char name[ArSize];
 
-	cout << "Your first name please: ";	// ввод имени
+const int AR_SIZE = 20;
+
+int main() {
+	using namespace std;
+	char name[AR_SIZE];
+	cout << "Your first name please: ";	// РІРІРѕРґ РёРјРµРЅРё
 	cin >> name;
-	
-	// Вывод имени посимвольно и в кодах ASCII
+	// Р’С‹РІРѕРґ РёРјРµРЅРё РїРѕСЃРёРјРІРѕР»СЊРЅРѕ Рё РІ РєРѕРґР°С… ASCII
 	cout << "There is your name, verticalized and ASCIIzed:\n";
-	int i = 0;				// начать с начала строки
-	while (name[i] != '\0')	// обрабатывать до конца строки. Можно написать: while (name[i])
-	{
+	int i = 0;				// РЅР°С‡Р°С‚СЊ СЃ РЅР°С‡Р°Р»Р° СЃС‚СЂРѕРєРё
+	while (name[i] != '\0')	{		// РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ РґРѕ РєРѕРЅС†Р° СЃС‚СЂРѕРєРё. РњРѕР¶РЅРѕ РЅР°РїРёСЃР°С‚СЊ: while (name[i])
 		cout << name[i] << ": " << int(name[i]) << endl;
-		i++;				// не забудьте этот шаг
+		i++;				// РЅРµ Р·Р°Р±СѓРґСЊС‚Рµ СЌС‚РѕС‚ С€Р°Рі
 	}
 	return 0;
 }
