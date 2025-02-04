@@ -1,17 +1,16 @@
-// textin2.cpp -- использование cin.get(char)
+// textin2.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ cin.get(char)
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	char ch;
 	int count = 0;
 	cout << "Enter characters; enter # to quit:\n";
-	cin.get(ch);		// использование функции cin.get(ch)
-	while (ch != '#')
-	{
+	cin.get(ch);		// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРё cin.get(ch)
+	while (ch != '#') {
 		cout << ch;
 		++count;
-		cin.get(ch);	// использование её снова
+		cin.get(ch);	// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РµС‘ СЃРЅРѕРІР°
 	}
 	cout << endl << count << " characters read\n";
 	return 0;
