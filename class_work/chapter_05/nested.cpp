@@ -1,31 +1,29 @@
-// nested.cpp -- вложенные циклы и двумерный массив
+// nested.cpp -- РІР»РѕР¶РµРЅРЅС‹Рµ С†РёРєР»С‹ Рё РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 #include <iostream>
-const int Cities = 5;
-const int Years = 4;
-int main()
-{
+
+const int CITIES = 5;
+const int YEARS = 4;
+
+int main() {
 	using namespace std;
-	const char * cities[Cities] =	// массив указателей на 5 строк
-	{
+	const char *cities[CITIES] = {	// РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° 5 СЃС‚СЂРѕРє
 		"Gribble City",
 		"Gribbletown",
 		"New Gribble",
 		"San Gribble",
 		"Gribble Vist"
 	};
-	int maxtemps[Years][Cities] =	// двумерный массив
-	{
-		{96, 100, 87, 101, 105},	// значения для maxtemps[0]
-		{96, 98, 91, 107, 104},		// значения для maxtemps[1]
-		{97, 101, 93, 108, 107},	// значения для maxtemps[2]
-		{98, 103, 95, 109, 108},	// значения для maxtemps[3]
+	int maxtemps[YEARS][CITIES] = {	// РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
+		{96, 100, 87, 101, 105},	// Р·РЅР°С‡РµРЅРёВ¤ РґР»СЏ maxtemps[0]
+		{96, 98, 91, 107, 104},		// Р·РЅР°С‡РµРЅРёВ¤ РґР»СЏ maxtemps[1]
+		{97, 101, 93, 108, 107},	// Р·РЅР°С‡РµРЅРёВ¤ РґР»СЏ maxtemps[2]
+		{98, 103, 95, 109, 108},	// Р·РЅР°С‡РµРЅРёВ¤ РґР»СЏ maxtemps[3]
 	};
 	cout << "Maximum temperatures for 2008-2011\n\n";
-	// Максимальные температуры в 2008-2011 гг.
-	for (int city = 0; city < Cities; ++city)
-	{
+	// РјР°РєСЃРёРјР°Р»СЊРЅС‹Рµ С‚РµРјРїРµСЂР°С‚СѓСЂС‹ РІ 2008-2011 РіРі.
+	for (int city = 0; city < CITIES; ++city) {
 		cout << cities[city] << ":\t";
-		for (int year = 0; year < Years; ++year)
+		for (int year = 0; year < YEARS; ++year)
 			cout << maxtemps[year][city] << "\t";
 		cout << endl;
 	}
