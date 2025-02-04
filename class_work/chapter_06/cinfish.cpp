@@ -1,29 +1,31 @@
-// cinfish.cpp -- нечисловой ввод прекращает выполнение цикла
+// cinfish.cpp -- РЅРµС‡РёСЃР»РѕРІРѕР№ РІРІРѕРґ РїСЂРµРєСЂР°С‰Р°РµС‚ РІС‹РїРѕР»РЅРµРЅРёРµ С†РёРєР»Р°
 #include <iostream>
-const int Max = 5;
+
+const int MAX = 5;
+
 int main() {
 	using namespace std;
-	// получение данных
-	double fish[Max];
+	// РїРѕР»СѓС‡РµРЅРёРµ РґР°РЅРЅС‹С…
+	double fish[MAX];
 	cout << "Please enter the weights of your fish.\n";
-	cout << "You may enter up to " << Max
-		<< " fish <q to terminate>.\n";	// ввод пойманных рыб
+	cout << "You may enter up to " << MAX
+	     << " fish <q to terminate>.\n";	// РІРІРѕРґ РїРѕР№РјР°РЅРЅС‹С… СЂС‹Р±
 	cout << "fish #1: ";
 	int i = 0;
-	while (i < Max && cin >> fish[i]) {
-		if (++i < Max)
+	while (i < MAX && cin >> fish[i]) {
+		if (++i < MAX)
 			cout << "fish #" << i + 1 << ": ";
 	}
-	// вычисление среднего значения
+	// РІС‹С‡РёСЃР»РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ
 	double total = 0.0;
 	for (int j = 0; j < i; ++j)
 		total += fish[j];
-	// вывод результатов
+	// РІС‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ
 	if (i == 0)
-		cout << "No fish\n";	// рыбы нет
+		cout << "No fish\n";		// СЂС‹Р±С‹ РЅРµС‚
 	else
 		cout << total / i << " = average weight of "
-		<< i << " fish\n";		// средний вес рыбы
+		     << i << " fish\n";		// СЃСЂРµРґРЅРёР№ РІРµСЃ СЂС‹Р±С‹
 	cout << "Done.\n";
 	return 0;
 }
