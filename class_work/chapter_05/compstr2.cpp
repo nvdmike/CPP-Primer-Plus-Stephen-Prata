@@ -1,12 +1,11 @@
-// compstr2.cpp -- сравнивание стрк с использованием класса string
+// compstr2.cpp -- СЃСЂР°РІРЅРёРІР°РЅРёРµ СЃС‚СЂРє СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РєР»Р°СЃСЃР° string
 #include <iostream>
-#include <string>	// класс string
-int main()
-{
+#include <string>	// РєР»Р°СЃСЃ string
+
+int main() {
 	using namespace std;
 	string word = "?ate";
-	for (char ch = 'a'; word != "mate"; ch++)
-	{
+	for (char ch = 'a'; word != "mate"; ch++) {
 		cout << word << endl;
 		word[0] = ch;
 	}
