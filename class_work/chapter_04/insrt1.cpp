@@ -1,15 +1,14 @@
-// insrt1.cpp -- чтение более одной строки
+// insrt1.cpp -- С‡С‚РµРЅРёРµ Р±РѕР»РµРµ РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё
 #include <iostream>
-int main()
-{
-	using namespace std;
-	const int ArSize = 20;
-	char name[ArSize];
-	char dessert[ArSize];
 
-	cout << "Enter your name:\n";				// запрос имени
+int main() {
+	using namespace std;
+	const int AR_SIZE = 20;
+	char name[AR_SIZE];
+	char dessert[AR_SIZE];
+	cout << "Enter your name:\n";			// Р·Р°РїСЂРѕСЃ РёРјРµРЅРё
 	cin >> name;
-	cout << "Enter your favorite dessert:\n";	// запрос любимого десерта
+	cout << "Enter your favorite dessert:\n";	// Р·Р°РїСЂРѕСЃ Р»СЋР±РёРјРѕРіРѕ РґРµСЃРµСЂС‚Р°
 	cin >> dessert;
 	cout << "I have some delicious " << dessert;
 	cout << " for you, " << name << ".\n";
