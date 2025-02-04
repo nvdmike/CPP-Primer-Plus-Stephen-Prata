@@ -1,26 +1,25 @@
-// use_new.cpp -- использование операции new
+// use_new.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРїРµСЂР°С†РёРё new
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	int nights = 1001;
-	int * pt = new int; // выделение пространства для int
-	*pt = 1001;			// сохранение в нём значения
-
-	cout << "nights value = ";							// значение nights
-	cout << nights << ": location " << &nights << endl;	// расположение nights
-	cout << "int ";										// значение и расположение int
+	int *pt = new int;					// РІС‹РґРµР»РµРЅРёРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РґР»СЏ int
+	*pt = 1001;						// СЃРѕС…СЂР°РЅРµРЅРёРµ РІ РЅС‘Рј Р·РЅР°С‡РµРЅРёСЏ
+	cout << "nights value = ";				// Р·РЅР°С‡РµРЅРёРµ nights
+	cout << nights << ": location " << &nights << endl;	// СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ nights
+	cout << "int ";						// Р·РЅР°С‡РµРЅРёРµ Рё СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ int
 	cout << "value = " << *pt << ": location = " << pt << endl;
-	double * pd = new double;	// выделение пространства для double
-	*pd = 10000001.0;			// сохранение в нём значение double
+	double * pd = new double;				// РІС‹РґРµР»РµРЅРёРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РґР»СЏ double
+	*pd = 10000001.0;					// СЃРѕС…СЂР°РЅРµРЅРёРµ РІ РЅС‘Рј Р·РЅР°С‡РµРЅРёРµ double
 	cout << "double ";
 	cout << "value = " << *pd << ": location = " << pd << endl;
-		// значение и расположение double
+	// Р·РЅР°С‡РµРЅРёРµ Рё СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ double
 	cout << "location of pointer pd: " << &pd << endl;
-		// расположение указателя pd
-	cout << "size of pt = " << sizeof(pt);				// размер pt
-	cout << ": size of *pt = " << sizeof(*pt) << endl;	// размер *pt
-	cout << "size of pd = " << sizeof(pd);				// размер pd
-	cout << ": size of *pd = " << sizeof(*pd) << endl;	// размер *pd
+	// СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ СѓРєР°Р·Р°С‚РµР»СЏ pd
+	cout << "size of pt = " << sizeof(pt);			// СЂР°Р·РјРµСЂ pt
+	cout << ": size of *pt = " << sizeof(*pt) << endl;	// СЂР°Р·РјРµСЂ *pt
+	cout << "size of pd = " << sizeof(pd);			// СЂР°Р·РјРµСЂ pd
+	cout << ": size of *pd = " << sizeof(*pd) << endl;	// СЂР°Р·РјРµСЂ *pd
 	return 0;
 }
