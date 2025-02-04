@@ -1,34 +1,31 @@
-// addpntrs.cpp -- сложение указателей
+// addpntrs.cpp -- СЃР»РѕР¶РµРЅРёРµ СѓРєР°Р·Р°С‚РµР»РµР№
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	double wages[3] = { 10000.0, 20000.0, 30000.0 };
 	short stacks[3] = { 3, 2, 1 };
-
-	// Два способа получить адрес массива
-	double * pw = wages;		// имя массива равно адресу
-	short * ps = &stacks[0];	// либо использование операции взятия адреса
-								// с элементом массива
+	// Р”РІР° СЃРїРѕСЃРѕР±Р° РїРѕР»СѓС‡РёС‚СЊ Р°РґСЂРµСЃ РјР°СЃСЃРёРІР°
+	double *pw = wages;					// РёРјСЏ РјР°СЃСЃРёРІР° СЂР°РІРЅРѕ Р°РґСЂРµСЃСѓ
+	short *ps = &stacks[0];					// Р»РёР±Рѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРїРµСЂР°С†РёРё РІР·СЏС‚РёСЏ Р°РґСЂРµСЃР°
+								// СЃ СЌР»РµРјРµРЅС‚РѕРј РјР°СЃСЃРёРІР°
 	cout << "pw = " << pw << ", *pw = " << *pw << endl;
 	pw = pw + 1;
-	cout << "add 1 to the pw pointer:\n";	// добавление 1 к указателю pw
+	cout << "add 1 to the pw pointer:\n";			// РґРѕР±Р°РІР»РµРЅРёРµ 1 Рє СѓРєР°Р·Р°С‚РµР»СЋ pw
 	cout << "pw = " << pw << ", *pw = " << *pw << "\n\n";
 	cout << "ps = " << ps << ", *ps = " << *ps << endl;
 	ps = ps + 1;
-	cout << "add 1 to the ps pointer:\n";	// добавление 1 к указателю ps
+	cout << "add 1 to the ps pointer:\n";			// РґРѕР±Р°РІР»РµРЅРёРµ 1 Рє СѓРєР°Р·Р°С‚РµР»СЋ ps
 	cout << "ps = " << ps << ", *ps = " << *ps << "\n\n";
-
-	// Доступ к двум элементам с помощью нотации массивов
+	// Р”РѕСЃС‚СѓРї Рє РґРІСѓРј СЌР»РµРјРµРЅС‚Р°Рј СЃ РїРѕРјРѕС‰СЊСЋ РЅРѕС‚Р°С†РёРё РјР°СЃСЃРёРІРѕРІ
 	cout << "access two elements with array notation\n";
 	cout << "stacks[0] = " << stacks[0]
-		 << ", stacks[1] = " << stacks[1] << endl;
-
-	// Доступ к двум элементам с помощью нотации указателей
+	     << ", stacks[1] = " << stacks[1] << endl;
+	// Р”РѕСЃС‚СѓРї Рє РґРІСѓРј СЌР»РµРјРµРЅС‚Р°Рј СЃ РїРѕРјРѕС‰СЊСЋ РЅРѕС‚Р°С†РёРё СѓРєР°Р·Р°С‚РµР»РµР№
 	cout << "access two elements with pointer notation\n";
 	cout << "*stacks = " << *stacks
-		 << ", *(stacks + 1) = " << *(stacks + 1) << endl;
-	cout << sizeof(wages) << " = size of wages array\n";	// размер массива wages
-	cout << sizeof(pw) << " = size of pw pointer\n";		// размер указателя pw
+	     << ", *(stacks + 1) = " << *(stacks + 1) << endl;
+	cout << sizeof(wages) << " = size of wages array\n";	// СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° wages
+	cout << sizeof(pw) << " = size of pw pointer\n";	// СЂР°Р·РјРµСЂ СѓРєР°Р·Р°С‚РµР»СЏ pw
 	return 0;
 }
