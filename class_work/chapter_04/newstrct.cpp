@@ -9,7 +9,7 @@ struct inflatable {	// определение структуры
 
 int main() {
 	using namespace std;
-	inflatable * ps = new inflatable;			// выделение памяти для структуры
+	inflatable *ps = new inflatable;			// выделение памяти для структуры
 	cout << "Enter name of inflatable item: ";		// ввод имени элемента inflatable
 	cin.get(ps->name, 20);					// первый метод для доступа к членам
 	cout << "Enter volume in cubic feet: ";			// ввод объёма в кубических футах
