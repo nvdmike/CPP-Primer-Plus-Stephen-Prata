@@ -1,18 +1,17 @@
-// arrstruc.cpp -- массив структур
+// arrstruc.cpp -- РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ
 #include <iostream>
-struct inflatable
-{
+
+struct inflatable {
 	char name[20];
 	float volume;
 	double price;
 };
-int main()
-{
+
+int main() {
 	using namespace std;
-	inflatable guests[2] =	// инициализация массива структур
-	{
-		{"Bambi", 0.5, 21.99},		// первая структура в массиве
-		{"Godzilla", 2000, 565.99}	// следующая структура в массиве
+	inflatable guests[2] = {		// РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР° СЃС‚СЂСѓРєС‚СѓСЂ
+		{"Bambi", 0.5, 21.99},		// РїРµСЂРІР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РІ РјР°СЃСЃРёРІРµ
+		{"Godzilla", 2000, 565.99}	// СЃР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РІ РјР°СЃСЃРёРІРµ
 	};
 	cout << "The guests " << guests[0].name << " and " << guests[1].name
 		 << "\nhave a combined volume of "
