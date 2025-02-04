@@ -1,12 +1,12 @@
-// assign.cpp -- изменение типа при инициализации
+// assign.cpp -- РёР·РјРµРЅРµРЅРёРµ С‚РёРїР° РїСЂРё РёРЅРёС†РёР°Р»РёР·Р°С†РёРё
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	cout.setf(ios_base::fixed, ios_base::floatfield);
-	float tree = 3;		// int преобразован в float
-	int guess = 3.9832;	// float преобразован в int
-	int debt = 7.2E12;	// результат не определён в C++
+	float tree = 3;		// int РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅ РІ float
+	int guess = 3.9832;	// float РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅ РІ int
+	int debt = 7.2E12;	// СЂРµР·СѓР»СЊС‚Р°С‚ РЅРµ РѕРїСЂРµРґРµР»С‘РЅ РІ C++
 	cout << "tree = " << tree << endl;
 	cout << "guess = " << guess << endl;
 	cout << "debt = " << debt << endl;
