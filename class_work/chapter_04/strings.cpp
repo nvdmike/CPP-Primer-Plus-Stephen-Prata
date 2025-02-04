@@ -1,15 +1,14 @@
-// strings.cpp -- сохранение строк в массиве
+// strings.cpp -- СЃРѕС…СЂР°РЅРµРЅРёРµ СЃС‚СЂРѕРє РІ РјР°СЃСЃРёРІРµ
 #include <iostream>
-#include <cstring>	// для функции strlen()
-int main()
-{
+#include <cstring>	// РґР»В¤ С„СѓРЅРєС†РёРё strlen()
+
+int main() {
 	using namespace std;
 	const int Size = 15;
-	char name1[Size];				// пустой массив
-	char name2[Size] = "C++owboy";	// инициализация массива
-	// ПРИМЕЧАНИЕ: некоторые реализации могут потребовать
-	// ключевого слова static для инициализации массива name2
-
+	char name1[Size];		// РїСѓСЃС‚РѕР№ РјР°СЃСЃРёРІ
+	char name2[Size] = "C++owboy";	// РёРЅРёС†РёР°Р»РёР·Р°С†РёВ¤ РјР°СЃСЃРёРІР°
+	// РџР РРњР•Р§РђРќРР•: РЅРµРєРѕС‚РѕСЂС‹Рµ СЂРµР°Р»РёР·Р°С†РёРё РјРѕРіСѓС‚ РїРѕС‚СЂРµР±РѕРІР°С‚СЊ
+	// РєР»СЋС‡РµРІРѕРіРѕ СЃР»РѕРІР° static РґР»В¤ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РјР°СЃСЃРёРІР° name2
 	cout << "Howdy! I'm " << name2;
 	cout << "! What's your name?\n";
 	cin >> name1;
@@ -17,7 +16,7 @@ int main()
 	cout << strlen(name1) << " letters and is stored\n";
 	cout << "in an array of " << sizeof(name1) << " bytes.\n";
 	cout << "Your initial is " << name1[0] << ".\n";
-	name2[3] = '\0';	// установка нулевого символа
+	name2[3] = '\0';		// СѓСЃС‚Р°РЅРѕРІРєР° РЅСѓР»РµРІРѕРіРѕ СЃРёРјРІРѕР»Р°
 	cout << "Here are the first 3 characters of my name: ";
 	cout << name2 << endl;
 	return 0;
