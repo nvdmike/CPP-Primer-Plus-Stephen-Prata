@@ -1,32 +1,29 @@
-// structur.cpp -- простая структура
+// structur.cpp -- РїСЂРѕСЃС‚Р°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°
 #include <iostream>
-struct inflatable	// объявление структуры
-{
+
+struct inflatable {	// РѕР±СЉСЏРІР»РµРЅРёРµ СЃС‚СЂСѓРєС‚СѓСЂС‹
 	char name[20];
 	float volume;
 	double price;
 };
-int main()
-{
+
+int main() {
 	using namespace std;
-	inflatable guest =
-	{
-		"Glorius Gloria",	// значение name
-		1.88,				// значение volume
-		29.99				// значение price
-	};	// guest - структурная переменная типа inflatable
-	// Инициализация указанными значениями
-	inflatable pal =
-	{
+	inflatable guest = {
+		"Glorius Gloria",		// Р·РЅР°С‡РµРЅРёРµ name
+		1.88,				// Р·РЅР°С‡РµРЅРёРµ volume
+		29.99				// Р·РЅР°С‡РµРЅРёРµ price
+	};	// guest - СЃС‚СЂСѓРєС‚СѓСЂРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ С‚РёРїР° inflatable
+	// РёРЅРёС†РёР°Р»РёР·Р°С†РёВ¤ СѓРєР°Р·Р°РЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
+	inflatable pal = {
 		"Audacious Arthur",
 		3.12,
 		32.99
-	};	// pal - вторая переменная типа inflatable
-	// ПРИМЕЧАНИЕ: некоторые реализации требуют использования
+	};					// pal - РІС‚РѕСЂР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ С‚РёРїР° inflatable
+	// РџР РРњР•Р§РђРќРР•: РЅРµРєРѕС‚РѕСЂС‹Рµ СЂРµР°Р»РёР·Р°С†РёРё С‚СЂРµР±СѓСЋС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёВ¤
 	// static inflatable guest =
-
 	cout << "Expand your guest list with " << guest.name;
-	cout << " and " << pal.name << "!\n";	// pal.name - член name переменной pal
+	cout << " and " << pal.name << "!\n";	// pal.name - С‡Р»РµРЅ name РїРµСЂРµРјРµРЅРЅРѕР№ pal
 	cout << "You have both for $";
 	cout << guest.price + pal.price << "!\n";
 	return 0;
