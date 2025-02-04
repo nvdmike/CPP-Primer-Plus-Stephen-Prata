@@ -1,16 +1,15 @@
-// exceed.cpp -- выход за пределы для некоторых целочисленных типов
+// exceed.cpp -- РІС‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹ РґР»СЏ РЅРµРєРѕС‚РѕСЂС‹С… С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹С… С‚РёРїРѕРІ
 #include <iostream>
-#define ZERO 0		// создает символ ZERO для значения 0
-#include <climits>	// определяет INT_MAX как наибольшее значение int
-int main()
-{
-	using namespace std;
-	short sam = SHRT_MAX;	// инициализирует переменную максимальным значением
-	unsigned short sue = sam;	// нормально, поскольку переменная sam уже определена
+#define ZERO 0		// СЃРѕР·РґР°РµС‚ СЃРёРјРІРѕР» ZERO РґР»СЏ Р·РЅР°С‡РµРЅРёСЏ 0
+#include <climits>	// РѕРїСЂРµРґРµР»СЏРµС‚ INT_MAX РєР°Рє РЅР°РёР±РѕР»СЊС€РµРµ Р·РЅР°С‡РµРЅРёРµ int
 
+int main() {
+	using namespace std;
+	short sam = SHRT_MAX;		// РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РїРµСЂРµРјРµРЅРЅСѓСЋ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј
+	unsigned short sue = sam;	// РЅРѕСЂРјР°Р»СЊРЅРѕ, РїРѕСЃРєРѕР»СЊРєСѓ РїРµСЂРµРјРµРЅРЅР°СЏ sam СѓР¶Рµ РѕРїСЂРµРґРµР»РµРЅР°
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
 	cout << " dollars deposited." << endl
-		 << "Add $1 to each account." << endl << "Now ";
+	     << "Add $1 to each account." << endl << "Now ";
 	sam = sam + 1;
 	sue = sue + 1;
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
