@@ -1,15 +1,14 @@
-// dowhile.cpp -- цикл с проверкой на выходе
+// dowhile.cpp -- С†РёРєР» СЃ РїСЂРѕРІРµСЂРєРѕР№ РЅР° РІС‹С…РѕРґРµ
 #include <iostream>
-int main()
-{
+
+int main() {
     using namespace std;
     int n;
     cout << "Enter numbers in the range 1-10 to find ";
-    cout << "my favorite number\n";	// запрос на ввод любимого числа из диапазона 1-10
-    do
-    {
-        cin >> n;						// выполнить тело
-    } while (n != 7);					// затем проверить
-    cout << "Yes, 7 is my favorite.\n";	// любимое число - 7
+    cout << "my favorite number\n";	    // Р·Р°РїСЂРѕСЃ РЅР° РІРІРѕРґ Р»СЋР±РёРјРѕРіРѕ С‡РёСЃР»Р° РёР· РґРёР°РїР°Р·РѕРЅР° 1-10
+    do {
+        cin >> n;						// РІС‹РїРѕР»РЅРёС‚СЊ С‚РµР»Рѕ
+    } while (n != 7);					// Р·Р°С‚РµРј РїСЂРѕРІРµСЂРёС‚СЊ
+    cout << "Yes, 7 is my favorite.\n";	// Р»СЋР±РёРјРѕРµ С‡РёСЃР»Рѕ - 7
     return 0;
 }
