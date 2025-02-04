@@ -1,8 +1,7 @@
 // newstrct.cpp -- использование new со структурой
 #include <iostream>
 
-struct inflatable	// определение структуры
-{
+struct inflatable {	// определение структуры
 	char name[20];
 	float volume;
 	double price;
