@@ -1,37 +1,37 @@
-// cctypes.cpp -- использование библиотеки ctype.h
+// cctypes.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р±РёР±Р»РёРѕС‚РµРєРё ctype.h
 #include <iostream>
-#include <cctype>						// прототипы символьных функций
-int main()
-{
+#include <cctype>	// РїСЂРѕС‚РѕС‚РёРїС‹ СЃРёРјРІРѕР»СЊРЅС‹С… С„СѓРЅРєС†РёР№
+
+int main() {
 	using namespace std;
 	cout << "Enmter text for analysis, and type @"
-		 << " to terminate input.\n";	// запрос текста для анализа; завершающий символ - @
+	     << " to terminate input.\n";	// Р·Р°РїСЂРѕСЃ С‚РµРєСЃС‚Р° РґР»СЏ Р°РЅР°Р»РёР·Р°; Р·Р°РІРµСЂС€Р°СЋС‰РёР№ СЃРёРјРІРѕР» - @
 	char ch;
 	int whitespace = 0;
 	int digits = 0;
 	int chars = 0;
 	int punct = 0;
 	int others = 0;
-	cin.get(ch);						// получение первого символа
-	while (ch != '@')					// проверка на признак окончания ввода
-	{
-		if (isalpha(ch))				// буквенный символ?
+	cin.get(ch);				// РїРѕР»СѓС‡РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р°
+	while (ch != '@') {			// РїСЂРѕРІРµСЂРєР° РЅР° РїСЂРёР·РЅР°Рє РѕРєРѕРЅС‡Р°РЅРёСЏ РІРІРѕРґР°
+
+		if (isalpha(ch))		// Р±СѓРєРІРµРЅРЅС‹Р№ СЃРёРјРІРѕР»?
 			chars++;
-		else if (isspace(ch))			// пробельный символ?
+		else if (isspace(ch))		// РїСЂРѕР±РµР»СЊРЅС‹Р№ СЃРёРјРІРѕР»?
 			whitespace++;
-		else if (isdigit(ch))			// десятичная цифра?
+		else if (isdigit(ch))		// РґРµСЃСЏС‚РёС‡РЅР°СЏ С†РёС„СЂР°?
 			digits++;
-		else if (ispunct(ch))			// знак препинания?
+		else if (ispunct(ch))		// Р·РЅР°Рє РїСЂРµРїРёРЅР°РЅРёСЏ?
 			punct++;
 		else
 			others++;
-		cin.get(ch);					// получение следующего символа
+		cin.get(ch);			// РїРѕР»СѓС‡РµРЅРёРµ СЃР»РµРґСѓСЋС‰РµРіРѕ СЃРёРјРІРѕР»Р°
 	}
 	cout << chars << " letters, "
-		 << whitespace << " whitespace, "
-		 << digits << " digits, "
-		 << punct << " punctuations, "
-		 << others << " others.\n";		// вывод количества букв, пробелов, цифр,
-										// знаков препинания и прочих символов
+	     << whitespace << " whitespace, "
+	     << digits << " digits, "
+	     << punct << " punctuations, "
+	     << others << " others.\n";		// РІС‹РІРѕРґ РєРѕР»РёС‡РµСЃС‚РІР° Р±СѓРєРІ, РїСЂРѕР±РµР»РѕРІ, С†РёС„СЂ,
+						// Р·РЅР°РєРѕРІ РїСЂРµРїРёРЅР°РЅРёСЏ Рё РїСЂРѕС‡РёС… СЃРёРјРІРѕР»РѕРІ
 	return 0;
 }
