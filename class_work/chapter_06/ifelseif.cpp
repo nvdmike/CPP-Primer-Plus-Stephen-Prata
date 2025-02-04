@@ -1,21 +1,21 @@
-// ifelseif.cpp -- использование оператора if else if else
+// ifelseif.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРїРµСЂР°С‚РѕСЂР° if else if else
 #include <iostream>
-const int Fave = 27;
-int main()
-{
+
+const int FAVE = 27;
+
+int main() {
 	using namespace std;
 	int n;
 	cout << "Enter a number in the range 1-100 to find: ";
-	cout << "my favorite number: ";	// запрос на ввод числа из диапазона 1-100
-	do
-	{
+	cout << "my favorite number: ";				// Р·Р°РїСЂРѕСЃ РЅР° РІРІРѕРґ С‡РёСЃР»Р° РёР· РґРёР°РїР°Р·РѕРЅР° 1-100
+	do {
 		cin >> n;
-		if (n < Fave)
-			cout << "Too low -- guess again: ";		// число слишком мало
-		else if (n > Fave)
-			cout << "Too high -- guess again: ";	// число слишком велико
+		if (n < FAVE)
+			cout << "Too low -- guess again: ";	// С‡РёСЃР»Рѕ СЃР»РёС€РєРѕРј РјР°Р»Рѕ
+		else if (n > FAVE)
+			cout << "Too high -- guess again: ";	// С‡РёСЃР»Рѕ СЃР»РёС€РєРѕРј РІРµР»РёРєРѕ
 		else
-			cout << Fave << " is right!\n";			// число угадано
-	} while (n != Fave);
+			cout << FAVE << " is right!\n";		// С‡РёСЃР»Рѕ СѓРіР°РґР°РЅРѕ
+	} while (n != FAVE);
 	return 0;
 }
