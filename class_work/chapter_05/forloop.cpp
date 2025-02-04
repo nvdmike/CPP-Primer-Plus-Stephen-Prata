@@ -1,11 +1,10 @@
-// forloop.cpp -- представление цикла for
+// forloop.cpp -- РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С†РёРєР»Р° for
 #include <iostream>
-int main()
-{
-	using namespace std;
-	int i;	// создание счётчика
 
-	// инициализация; проверка; обновление
+int main() {
+	using namespace std;
+	int i;	// СЃРѕР·РґР°РЅРёРµ СЃС‡С‘С‚С‡РёРєР°
+	// РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ; РїСЂРѕРІРµСЂРєР°; РѕР±РЅРѕРІР»РµРЅРёРµ
 	for (i = 0; i < 5; i++)
 		cout << "C++ knows loops.\n";
 	cout << "C++ knows when to stop.\n";
