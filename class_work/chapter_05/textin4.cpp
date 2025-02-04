@@ -1,12 +1,11 @@
-// textin4.cpp -- чтение символов с помощью cin.get()
+// textin4.cpp -- С‡С‚РµРЅРёРµ СЃРёРјРІРѕР»РѕРІ СЃ РїРѕРјРѕС‰СЊСЋ cin.get()
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	int ch;							// должно быть типа int, а не char
+	int ch;					// РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‚РёРїР° int, Р° РЅРµ char
 	int count = 0;
-	while ((ch = cin.get()) != EOF)	// проверка конца файла
-	{
+	while ((ch = cin.get()) != EOF)	{	// РїСЂРѕРІРµСЂРєР° РєРѕРЅС†Р° С„Р°Р№Р»Р°
 		cout.put(char(ch));
 		++count;
 	}
