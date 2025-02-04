@@ -1,33 +1,28 @@
-// strtype3.cpp -- дополнительные средства класса string
+// strtype3.cpp -- РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃСЂРµРґСЃС‚РІР° РєР»Р°СЃСЃР° string
 #include <iostream>
-#include <string>	// обеспечение доступа к классу string
-#include <cstring>	// библиотека обработки строк в стиле C
-int main()
-{
+#include <string>	// РѕР±РµСЃРїРµС‡РµРЅРёРµ РґРѕСЃС‚СѓРїР° Рє РєР»Р°СЃСЃСѓ string
+#include <cstring>	// Р±РёР±Р»РёРѕС‚РµРєР° РѕР±СЂР°Р±РѕС‚РєРё СЃС‚СЂРѕРє РІ СЃС‚РёР»Рµ C
+
+int main() {
 	using namespace std;
 	char charr1[20];
 	char charr2[20] = "jaguar";
 	string str1;
 	string str2 = "panther";
-
-	// Присваивание объектов string и символьных массивов
-	str1 = str2;				// копирование str2 в str1
-	//  В реализации C++ Visual Studio 2025, необходимо использовать strcpy_s вместо strcpy
-	strcpy_s(charr1, charr2);	// копирование charr2 в charr1
-
-	// Добавление объектов string и симользных массивов
-	str1 += " paste";			// добавление " paste" в конец str1
-	//  В реализации C++ Visual Studio 2025, необходимо использовать strcat_s вместо strcat
-	strcat_s(charr1, " juice");	// добавление " juice" в конец charr1
-
-	// Определение длины объекта string и строки в стиле C
-	int len1 = str1.size();		// получение длины str1
-	int len2 = strlen(charr1);	// получение длины charr1
-	
+	// РїСЂРёСЃРІР°РёРІР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ string Рё СЃРёРјРІРѕР»СЊРЅС‹С… РјР°СЃСЃРёРІРѕРІ
+	str1 = str2;			// РєРѕРїРёСЂРѕРІР°РЅРёРµ str2 РІ str1
+	//  РІ СЂРµР°Р»РёР·Р°С†РёРё C++ Visual Studio 2025, РЅРµРѕР±С…РѕРґРёРјРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ strcpy_s РІРјРµСЃС‚Рѕ strcpy
+	strcpy_s(charr1, charr2);	// РєРѕРїРёСЂРѕРІР°РЅРёРµ charr2 РІ charr1
+	// РґРѕР±Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ string Рё СЃРёРјРѕР»СЊР·РЅС‹С… РјР°СЃСЃРёРІРѕРІ
+	str1 += " paste";		// РґРѕР±Р°РІР»РµРЅРёРµ " paste" РІ РєРѕРЅРµС† str1
+	//  Р’ СЂРµР°Р»РёР·Р°С†РёРё C++ Visual Studio 2025, РЅРµРѕР±С…РѕРґРёРјРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ strcat_s РІРјРµСЃС‚Рѕ strcat
+	strcat_s(charr1, " juice");	// РґРѕР±Р°РІР»РµРЅРёРµ " juice" РІ РєРѕРЅРµС† charr1
+	// РѕРїСЂРµРґРµР»РµРЅРёРµ РґР»РёРЅС‹ РѕР±СЉРµРєС‚Р° string Рё СЃС‚СЂРѕРєРё РІ СЃС‚РёР»Рµ C
+	int len1 = str1.size();		// РїРѕР»СѓС‡РµРЅРёРµ РґР»РёРЅС‹ str1
+	int len2 = strlen(charr1);	// РїРѕР»СѓС‡РµРЅРёРµ РґР»РёРЅС‹ charr1
 	cout << "The string " << str1 << " contains "
-		 << len1 << " characters.\n";
+	     << len1 << " characters.\n";
 	cout << "The string " << charr1 << " contains "
-		 << len2 << " characters.\n";
-
+	     << len2 << " characters.\n";
 	return 0;
 }
