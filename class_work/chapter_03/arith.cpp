@@ -1,11 +1,10 @@
-// arith.cpp -- примеры некоторых арифметических операций в C++
+// arith.cpp -- РїСЂРёРјРµСЂС‹ РЅРµРєРѕС‚РѕСЂС‹С… Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№ РІ C++
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	float hats, heads;
-
-	cout.setf(ios_base::fixed, ios_base::floatfield);	// формат с фиксированной точкой
+	cout.setf(ios_base::fixed, ios_base::floatfield);	// С„РѕСЂРјР°С‚ СЃ С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕР№ С‚РѕС‡РєРѕР№
 	cout << "Enter a number: ";
 	cin >> hats;
 	cout << "Enter another number: ";
