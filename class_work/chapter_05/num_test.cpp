@@ -1,14 +1,14 @@
-// num_test.cpp -- использование числовой проверки в цикле
+// num_test.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С‡РёСЃР»РѕРІРѕР№ РїСЂРѕРІРµСЂРєРё РІ С†РёРєР»Рµ
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	cout << "Enter the starting countdown value: ";	// ввод начального значения счётчика
+	cout << "Enter the starting countdown value: ";	// РІРІРѕРґ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ СЃС‡С‘С‚С‡РёРєР°
 	int limit;
 	cin >> limit;
 	int i;
-	for (i = limit; i; i--)							// завершается, когда i = 0
+	for (i = limit; i; i--)				// Р·Р°РІРµСЂС€Р°РµС‚СЃСЏ, РєРѕРіРґР° i = 0
 		cout << "i = " << i << "\n";
-	cout << "Done now that i = " << i << "\n";		// цикл завершён, вывод значения i
+	cout << "Done now that i = " << i << "\n";	// С†РёРєР» Р·Р°РІРµСЂС€С‘РЅ, РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ i
 	return 0;
 }
