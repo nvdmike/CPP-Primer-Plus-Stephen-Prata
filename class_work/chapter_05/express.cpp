@@ -1,20 +1,20 @@
-// express.cpp -- значения выражений
+// express.cpp -- Р·РЅР°С‡РµРЅРёСЏ РІС‹СЂР°Р¶РµРЅРёР№
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	int x;
-	cout << "The expression x = 100 has the value ";	// вывод значения x = 100
+	cout << "The expression x = 100 has the value ";	// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ x = 100
 	cout << (x = 100) << endl;
 	cout << "Now x = " << x << endl;
-	cout << "The expression x < 3 has the value ";		// вывод значения x < 3
+	cout << "The expression x < 3 has the value ";		// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ x < 3
 	cout << (x < 3) << endl;
-	cout << "The expression x > 3 has the value ";		// вывод значения x > 3
+	cout << "The expression x > 3 has the value ";		// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ x > 3
 	cout << (x > 3) << endl;
-	cout.setf(ios_base::boolalpha);						// новое средство C++
-	cout << "The expression x < 3 has the value ";		// вывод значения x < 3
+	cout.setf(ios_base::boolalpha);				// РЅРѕРІРѕРµ СЃСЂРµРґСЃС‚РІРѕ C++
+	cout << "The expression x < 3 has the value ";		// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ x < 3
 	cout << (x < 3) << endl;
-	cout << "The expression x > 3 has the value ";		// вывод значения x > 3
+	cout << "The expression x > 3 has the value ";		// РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ x > 3
 	cout << (x > 3) << endl;
 	return 0;
 }
