@@ -1,24 +1,25 @@
-// newstrct.cpp -- использование new со структурой
+// newstrct.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ new СЃРѕ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
 #include <iostream>
-struct inflatable	// определение структуры
+
+struct inflatable	// РѕРїСЂРµРґРµР»РµРЅРёРµ СЃС‚СЂСѓРєС‚СѓСЂС‹
 {
 	char name[20];
 	float volume;
 	double price;
 };
-int main()
-{
+
+int main() {
 	using namespace std;
-	inflatable * ps = new inflatable;			// выделение памяти для структуры
-	cout << "Enter name of inflatable item: ";	// ввод имени элемента inflatable
-	cin.get(ps->name, 20);						// первый метод для доступа к членам
-	cout << "Enter volume in cubic feet: ";		// ввод объёма в кубических футах
-	cin >> (*ps).volume;						// второй метод для доступа к членам
-	cout << "Enter price: $";					// ввод цены
+	inflatable * ps = new inflatable;			// РІС‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РґР»СЏ СЃС‚СЂСѓРєС‚СѓСЂС‹
+	cout << "Enter name of inflatable item: ";		// РІРІРѕРґ РёРјРµРЅРё СЌР»РµРјРµРЅС‚Р° inflatable
+	cin.get(ps->name, 20);					// РїРµСЂРІС‹Р№ РјРµС‚РѕРґ РґР»СЏ РґРѕСЃС‚СѓРїР° Рє С‡Р»РµРЅР°Рј
+	cout << "Enter volume in cubic feet: ";			// РІРІРѕРґ РѕР±СЉС‘РјР° РІ РєСѓР±РёС‡РµСЃРєРёС… С„СѓС‚Р°С…
+	cin >> (*ps).volume;					// РІС‚РѕСЂРѕР№ РјРµС‚РѕРґ РґР»СЏ РґРѕСЃС‚СѓРїР° Рє С‡Р»РµРЅР°Рј
+	cout << "Enter price: $";				// РІРІРѕРґ С†РµРЅС‹
 	cin >> ps->price;
-	cout << "Name: " << (*ps).name << endl;					// второй метод
-	cout << "Volume: " << ps->volume << " cubic feet\n";	// первый метод
-	cout << "Price: $" << ps->price << endl;				// первый метод
+	cout << "Name: " << (*ps).name << endl;			// РІС‚РѕСЂРѕР№ РјРµС‚РѕРґ
+	cout << "Volume: " << ps->volume << " cubic feet\n";	// РїРµСЂРІС‹Р№ РјРµС‚РѕРґ
+	cout << "Price: $" << ps->price << endl;		// РїРµСЂРІС‹Р№ РјРµС‚РѕРґ
 	delete ps;
 	return 0;
 }
