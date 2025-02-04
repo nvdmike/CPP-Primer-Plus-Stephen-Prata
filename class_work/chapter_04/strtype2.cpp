@@ -1,29 +1,25 @@
-// strtype2.cpp -- присваивание, сложение, добавление
+// strtype2.cpp -- РїСЂРёСЃРІР°РёРІР°РЅРёРµ, СЃР»РѕР¶РµРЅРёРµ, РґРѕР±Р°РІР»РµРЅРёРµ
 #include <iostream>
-#include <string>	// обеспечение доступа к классу string
-int main()
-{
+#include <string>	// РѕР±РµСЃРїРµС‡РµРЅРёРµ РґРѕСЃС‚СѓРїР° Рє РєР»Р°СЃСЃСѓ string
+
+int main() {
 	using namespace std;
 	string s1 = "penguin";
 	string s2, s3;
-
-	// Присваивание одного объекта string другому
+	// РїСЂРёСЃРІР°РёРІР°РЅРёРµ РѕРґРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° string РґСЂСѓРіРѕРјСѓ
 	cout << "You can assign one string object to another: s2 = s1\n";
 	s2 = s1;
 	cout << "s1: " << s1 << ", s2: " << s2 << endl;
-
-	// Присваивание строки в стиле C объекту string
+	// РїСЂРёСЃРІР°РёРІР°РЅРёРµ СЃС‚СЂРѕРєРё РІ СЃС‚РёР»Рµ C РѕР±СЉРµРєС‚Сѓ string
 	cout << "You can assign a C-style string to a string object.\n";
 	cout << "s2 = \"buzzard\"\n";
 	s2 = "buzzard";
 	cout << "s2: " << s2 << endl;
-
-	// Конкатенация строк
+	// РєРѕРЅРєР°С‚РµРЅР°С†РёСЏ СЃС‚СЂРѕРє
 	cout << "You can concatenate strings: s3 = s1 + s2\n";
 	s3 = s1 + s2;
 	cout << "s3: " << s3 << endl;
-
-	// Добавление строки
+	// РґРѕР±Р°РІР»РµРЅРёРµ СЃС‚СЂРѕРєРё
 	cout << "You can append strings.\n";
 	s1 += s2;
 	cout << "s1 += s2 yields s1 = " << s1 << endl;
