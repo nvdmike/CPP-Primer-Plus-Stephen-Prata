@@ -1,16 +1,15 @@
-// insrt3.cpp -- чтение более одного слова с помощью get() и get()
+// insrt3.cpp -- С‡С‚РµРЅРёРµ Р±РѕР»РµРµ РѕРґРЅРѕРіРѕ СЃР»РѕРІР° СЃ РїРѕРјРѕС‰СЊСЋ get() Рё get()
 #include <iostream>
-int main()
-{
-	using namespace std;
-	const int ArSize = 20;
-	char name[ArSize];
-	char dessert[ArSize];
 
-	cout << "Enter your name:\n";				// запрос имени
-	cin.get(name, ArSize).get();				// читать строку и символ новой строки
-	cout << "Enter your favorite dessert:\n";	// запрос любимого дессерта
-	cin.get(dessert, ArSize).get();
+int main() {
+	using namespace std;
+	const int AR_SIZE = 20;
+	char name[AR_SIZE];
+	char dessert[AR_SIZE];
+	cout << "Enter your name:\n";			// Р·Р°РїСЂРѕСЃ РёРјРµРЅРё
+	cin.get(name, AR_SIZE).get();			// С‡РёС‚Р°С‚СЊ СЃС‚СЂРѕРєСѓ Рё СЃРёРјРІРѕР» РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё
+	cout << "Enter your favorite dessert:\n";	// Р·Р°РїСЂРѕСЃ Р»СЋР±РёРјРѕРіРѕ РґРµСЃСЃРµСЂС‚Р°
+	cin.get(dessert, AR_SIZE).get();
 	cout << "I have some delicious " << dessert;
 	cout << " for you, " << name << ".\n";
 	return 0;
