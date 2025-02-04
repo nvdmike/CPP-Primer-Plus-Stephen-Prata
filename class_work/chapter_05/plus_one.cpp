@@ -1,7 +1,7 @@
-// plus_one.cpp -- операция инкремента
+// plus_one.cpp -- РѕРїРµСЂР°С†РёСЏ РёРЅРєСЂРµРјРµРЅС‚Р°
 #include <iostream>
-int main()
-{
+
+int main() {
 	using std::cout;
 	int a = 20;
 	int b = 20;
