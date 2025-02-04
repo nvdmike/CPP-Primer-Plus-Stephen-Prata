@@ -1,24 +1,24 @@
-// not.cpp -- использование логической операции "НЕ"
+// not.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р»РѕРіРёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё "РЊв‰€"
 #include <iostream>
 #include <climits>
+
 bool is_int(double);
-int main()
-{
+
+int main() {
 	using namespace std;
 	double num;
-	cout << "You, dude! Enter an integer value: ";		// запрос на ввод целочисленного значения
+	cout << "You, dude! Enter an integer value: ";		// Р·Р°РїСЂРѕСЃ РЅР° РІРІРѕРґ С†РµР»РѕС‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёВ¤
 	cin >> num;
-	while (!is_int(num))								// продолжать пока num не является int
-	{
-		cout << "Out of range -- please try again: ";	// выход за пределы диапазона
+	while (!is_int(num)) {					// РїСЂРѕРґРѕР»Р¶Р°С‚СЊ РїРѕРєР° num РЅРµ В¤РІР»В¤РµС‚СЃВ¤ int
+		cout << "Out of range -- please try again: ";	// РІС‹С…РѕРґ Р·Р° РїСЂРµРґРµР»С‹ РґРёР°РїР°Р·РѕРЅР°
 		cin >> num;
 	}
-	int val = int(num);									// приведение типа
+	int val = int(num);					// РїСЂРёРІРµРґРµРЅРёРµ С‚РёРїР°
 	cout << "You've entered the integer " << val << "\nBye\n";
 	return 0;
 }
-bool is_int(double x)
-{
+
+bool is_int(double x) {
 	if (x <= INT_MAX && x >= INT_MIN)
 		return true;
 	else
