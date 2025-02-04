@@ -1,18 +1,18 @@
-// switch.cpp -- использование оператора switch
+// switch.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРїРµСЂР°С‚РѕСЂР° switch
 #include <iostream>
+
 using namespace std;
-void showmenu();	// прототипы функций
+
+void showmenu();	// РїСЂРѕС‚РѕС‚РёРїС‹ С„СѓРЅРєС†РёР№
 void report();
 void comfort();
-int main()
-{
+
+int main() {
 	showmenu();
 	int choice;
 	cin >> choice;
-	while (choice != 5)
-	{
-		switch (choice)
-		{
+	while (choice != 5) {
+		switch (choice)	{
 			case 1 : cout << "\a\n";
 				break;
 			case 2 : report();
@@ -30,23 +30,20 @@ int main()
 	return 0;
 }
 
-void showmenu()
-{
+void showmenu() {
 	cout << "Please enter 1, 2, 3, 4, or 5:\n";
-	"1) alarm 2)	report\n"
+		"1) alarm 2)	report\n"
 		"3) alibi 4)	comfort\n"
 		"5) quit\n";
 }
 
-void report()
-{
+void report() {
 	cout << "It's been an excellent week for buisiness.\n"
-			"Sales are up 120%. Expenses are down 35%.\n";
+		"Sales are up 120%. Expenses are down 35%.\n";
 }
 
-void comfort()
-{
+void comfort() {
 	cout << "Your employees think you are thje fines CEO\n"
-			"in the industry. The board of directors think\n"
-			"you are the finest CEO in the industry.\n";
+		"in the industry. The board of directors think\n"
+		"you are the finest CEO in the industry.\n";
 }
