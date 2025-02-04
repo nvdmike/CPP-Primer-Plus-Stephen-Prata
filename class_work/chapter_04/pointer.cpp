@@ -9,7 +9,7 @@ int main() {
 	// выразить значения двумя способами
 	cout << "Values: updates = " << updates;
 	cout << ", *p_updates = " << *p_updates << endl;
-	// выразить адреса двум¤ способами
+	// выразить адреса двумя способами
 	cout << "Addresses: &updates = " << &updates;
 	cout << ", p_updates = " << p_updates << endl;
 	// изменить значение через указатель
