@@ -1,19 +1,21 @@
-// jump.cpp -- использование операторов continue и break
+// jump.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РѕРїРµСЂР°С‚РѕСЂРѕРІ continue Рё break
 #include <iostream>
-const int ArSize = 80;
+
+const int AR_SIZE = 80;
+
 int main() {
 	using namespace std;
-	char line[ArSize];
+	char line[AR_SIZE];
 	int spaces = 0;
-	cout << "Enter a line of text:\n";			// запрос на ввод строки текста
-	cin.get(line, ArSize);
-	cout << "Complete line:\n" << line << endl;	// вывод полной строки
-	cout << "Line through first period:\n";		// вывод строки до первой точки
+	cout << "Enter a line of text:\n";		// Р·Р°РїСЂРѕСЃ РЅР° РІРІРѕРґ СЃС‚СЂРѕРєРё С‚РµРєСЃС‚Р°
+	cin.get(line, AR_SIZE);
+	cout << "Complete line:\n" << line << endl;	// РІС‹РІРѕРґ РїРѕР»РЅРѕР№ СЃС‚СЂРѕРєРё
+	cout << "Line through first period:\n";		// РІС‹РІРѕРґ СЃС‚СЂРѕРєРё РґРѕ РїРµСЂРІРѕР№ С‚РѕС‡РєРё
 	for (int i = 0; line[i] != '\0'; i++) {
-		cout << line[i];						// отображение символа
-		if (line[i] == '.')						// завершение, если это точка
+		cout << line[i];			// РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРёРјРІРѕР»Р°
+		if (line[i] == '.')			// Р·Р°РІРµСЂС€РµРЅРёРµ, РµСЃР»Рё СЌС‚Рѕ С‚РѕС‡РєР°
 			break;
-		if (line[i] != ' ')						// пропуск отсавшейся части цикла
+		if (line[i] != ' ')			// РїСЂРѕРїСѓСЃРє РѕС‚СЃР°РІС€РµР№СЃСЏ С‡Р°СЃС‚Рё С†РёРєР»Р°
 			continue;
 		spaces++;
 	}
