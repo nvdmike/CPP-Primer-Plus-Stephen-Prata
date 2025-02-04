@@ -1,13 +1,13 @@
-// condit.cpp -- использование условной операции
+// condit.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СѓСЃР»РѕРІРЅРѕР№ РѕРїРµСЂР°С†РёРё
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	int a, b;
-	cout << "Enter two integers: ";	// запрос на ввод двух целых чисел
+	cout << "Enter two integers: ";	// Р·Р°РїСЂРѕСЃ РЅР° РІРІРѕРґ РґРІСѓС… С†РµР»С‹С… С‡РёСЃРµР»
 	cin >> a >> b;
 	cout << "The larger of " << a << " and " << b;
-	int c = a > b ? a : b;			// c = a, если a > b, иначе c = b
-	cout << " is " << c << endl;	// вывод большего из указанных чисел
+	int c = a > b ? a : b;		// c = a, РµСЃР»Рё a > b, РёРЅР°С‡Рµ c = b
+	cout << " is " << c << endl;	// РІС‹РІРѕРґ Р±РѕР»СЊС€РµРіРѕ РёР· СѓРєР°Р·Р°РЅРЅС‹С… С‡РёСЃРµР»
 	return 0;
 }
