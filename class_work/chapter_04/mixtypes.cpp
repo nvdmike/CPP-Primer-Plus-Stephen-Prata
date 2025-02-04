@@ -1,24 +1,24 @@
-// mixtypes.cpp -- некоторые комбинации типов
+// mixtypes.cpp -- РЅРµРєРѕС‚РѕСЂС‹Рµ РєРѕРјР±РёРЅР°С†РёРё С‚РёРїРѕРІ
 #include <iostream>
-struct antatcica_years_end
-{
+
+struct antatcica_years_end {
 	int year;
-	/* определение других нужных данных */
+	/* РѕРїСЂРµРґРµР»РµРЅРёРµ РґСЂСѓРіРёС… РЅСѓР¶РЅС‹С… РґР°РЅРЅС‹С… */
 };
-int main()
-{
+
+int main() {
 	antatcica_years_end s01, s02, s03;
 	s01.year = 1998;
 	antatcica_years_end* pa = &s02;
 	pa->year = 1999;
-	antatcica_years_end trio[3];	// массив из трех структур
+	antatcica_years_end trio[3];	// РјР°СЃСЃРёРІ РёР· С‚СЂРµС… СЃС‚СЂСѓРєС‚СѓСЂ
 	trio[0].year = 2003;
 	std::cout << trio->year << std::endl;
 	const antatcica_years_end* arp[3] = { &s01, &s02, &s03 };
 	std::cout << arp[1]->year << std::endl;
 	const antatcica_years_end** ppa = arp;
-	auto ppb = arp;					// автоматическое выведение типа в C++
-	// или можно использовать antatcica_years_end **ppb = arp;
+	auto ppb = arp;			// Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РІС‹РІРµРґРµРЅРёРµ С‚РёРїР° РІ C++
+	// РёР»Рё РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ antatcica_years_end **ppb = arp;
 	std::cout << (*ppa)->year << std::endl;
 	std::cout << (*(ppb+1))->year << std::endl;
 	return 0;
