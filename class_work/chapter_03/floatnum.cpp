@@ -1,11 +1,11 @@
-// floatnum.cpp -- типы с плавающей точкой
+// floatnum.cpp -- С‚РёРїС‹ СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
-	cout.setf(ios_base::fixed, ios_base::floatfield);	// фиксированная точка
-	float tub = 10.0 / 3.0;								// подходит для 6 разрядов
-	double mint = 10.0 / 3.0;							// подходит для 15 разрядов
+	cout.setf(ios_base::fixed, ios_base::floatfield);	// С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С‚РѕС‡РєР°
+	float tub = 10.0 / 3.0;					// РїРѕРґС…РѕРґРёС‚ РґР»СЏ 6 СЂР°Р·СЂСЏРґРѕРІ
+	double mint = 10.0 / 3.0;				// РїРѕРґС…РѕРґРёС‚ РґР»СЏ 15 СЂР°Р·СЂСЏРґРѕРІ
 	const float million = 1.0e6;
 	cout << "tub = " << tub;
 	cout << ", a million tubs = " << million * tub;
