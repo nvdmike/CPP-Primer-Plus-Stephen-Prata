@@ -1,17 +1,17 @@
-// waiting.cpp -- использованеи clock() в цикле переменной задержки
+// waiting.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРµРё clock() РІ С†РёРєР»Рµ РїРµСЂРµРјРµРЅРЅРѕР№ Р·Р°РґРµСЂР¶РєРё
 #include <iostream>
-#include <ctime>	// описывает функции clock() и тип clock_t
-int main()
-{
+#include <ctime>	// РѕРїРёСЃС‹РІР°РµС‚ С„СѓРЅРєС†РёРё clock() Рё С‚РёРї clock_t
+
+int main() {
 	using namespace std;
-	cout << "Enter the delay time, in seconds: ";	// ввод времени задержки в секундах
+	cout << "Enter the delay time, in seconds: ";	// РІРІРѕРґ РІСЂРµРјРµРЅРё Р·Р°РґРµСЂР¶РєРё РІ СЃРµРєСѓРЅРґР°С…
 	float secs;
 	cin >> secs;
-	clock_t delay = secs * CLOCKS_PER_SEC;			// преобразование в тики
+	clock_t delay = secs * CLOCKS_PER_SEC;		// РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ С‚РёРєРё
 	cout << "starting\a\n";
 	clock_t start = clock();
-	while (clock() - start < delay)					// ожидание истечения времени
-		;											// обратите внимание на точку с запятой
+	while (clock() - start < delay)			// РѕР¶РёРґР°РЅРёРµ РёСЃС‚РµС‡РµРЅРёСЏ РІСЂРµРјРµРЅРё
+		;					// РѕР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° С‚РѕС‡РєСѓ СЃ Р·Р°РїСЏС‚РѕР№
 	cout << "done\a\n";
 	return 0;
 }
