@@ -1,17 +1,17 @@
-// more_and.cpp -- использование логической операции "И"
+// more_and.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ Р»РѕРіРёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё "В»"
 #include <iostream>
-const char* qualify[4] =			// массив указателей на строки
-{
-	"10,000-meter race.\n",			// забег на 10 000 метров
-	"mud tug-of-war.\n",			// перетягивание каната в грязи
-	"masters canoe jousting.\n",	// состязание мастеров каноэ
-	"pie-throwing festival.\n"		// фестиваль по бросанию пирожков
+
+const char *qualify[4] = {		// РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° СЃС‚СЂРѕРєРё
+	"10,000-meter race.\n",		// Р·Р°Р±РµРі РЅР° 10 000 РјРµС‚СЂРѕРІ
+	"mud tug-of-war.\n",		// РїРµСЂРµС‚В¤РіРёРІР°РЅРёРµ РєР°РЅР°С‚Р° РІ РіСЂВ¤Р·Рё
+	"masters canoe jousting.\n",	// СЃРѕСЃС‚В¤Р·Р°РЅРёРµ РјР°СЃС‚РµСЂРѕРІ РєР°РЅРѕСЌ
+	"pie-throwing festival.\n"	// С„РµСЃС‚РёРІР°Р»СЊ РїРѕ Р±СЂРѕСЃР°РЅРёСЋ РїРёСЂРѕР¶РєРѕРІ
 };
-int main()
-{
+
+int main() {
 	using namespace std;
 	int age;
-	cout << "Enter your age in years: ";	// запрос возраста в годах
+	cout << "Enter your age in years: ";			// Р·Р°РїСЂРѕСЃ РІРѕР·СЂР°СЃС‚Р° РІ РіРѕРґР°С…
 	cin >> age;
 	int index;
 	if (age > 17 && age < 35)
@@ -22,6 +22,6 @@ int main()
 		index = 2;
 	else
 		index = 3;
-	cout << "Your qualify for the " << qualify[index];	// вывод рекомендованного результата
+	cout << "Your qualify for the " << qualify[index];	// РІС‹РІРѕРґ СЂРµРєРѕРјРµРЅРґРѕРІР°РЅРЅРѕРіРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р°
 	return 0;
 }
