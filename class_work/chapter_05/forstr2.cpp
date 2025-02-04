@@ -1,22 +1,21 @@
-// forstr2.cpp -- обращение порядка элементов массива
+// forstr2.cpp -- РѕР±СЂР°С‰РµРЅРёРµ РїРѕСЂСЏРґРєР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
 #include <iostream>
 #include <string>
-int main()
-{
+
+int main() {
 	using namespace std;
 	cout << "Enter a word: ";
 	string word;
 	cin >> word;
-
-	// Физическая модификация объекта string
+	// Р¤РёР·РёС‡РµСЃРєР°СЏ РјРѕРґРёС„РёРєР°С†РёСЏ РѕР±СЉРµРєС‚Р° string
 	char temp;
 	int i, j;
-	for (j = 0, i = word.size() - 1; j < i; --i, ++j)
-	{	// начало блока
+	for (j = 0, i = word.size() - 1; j < i; --i, ++j) {
+		// РЅР°С‡Р°Р»Рѕ Р±Р»РѕРєР°
 		temp = word[i];
 		word[i] = word[j];
 		word[j] = temp;
-	}	// конец блока
+	}	// РєРѕРЅРµС† Р±Р»РѕРєР°
 	cout << word << "\nDone\n";
 	return 0;
 }
