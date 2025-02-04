@@ -1,11 +1,11 @@
-// bigstep.cpp -- цикл указанным пользователем шагом
+// bigstep.cpp -- С†РёРєР» СѓРєР°Р·Р°РЅРЅС‹Рј РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј С€Р°РіРѕРј
 #include <iostream>
-int main()
-{
-	using std::cout;				// объявление using
+
+int main() {
+	using std::cout;		// РѕР±СЉВ¤РІР»РµРЅРёРµ using
 	using std::cin;
 	using std::endl;
-	cout << "Enter an integer: ";	// ввод целого числа
+	cout << "Enter an integer: ";	// РІРІРѕРґ С†РµР»РѕРіРѕ С‡РёСЃР»Р°
 	int by;
 	cin >> by;
 	cout << "Counting by " << by << "s:\n";
