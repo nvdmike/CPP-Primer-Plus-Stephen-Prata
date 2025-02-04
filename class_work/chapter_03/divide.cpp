@@ -1,7 +1,7 @@
-// divide.cpp -- деление целых чисел и чисел с плавающей точкой
+// divide.cpp -- РґРµР»РµРЅРёРµ С†РµР»С‹С… С‡РёСЃРµР» Рё С‡РёСЃРµР» СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№
 #include <iostream>
-int main()
-{
+
+int main() {
 	using namespace std;
 	cout.setf(ios_base::fixed, ios_base::floatfield);
 	cout << "Integer division: 9/5 = " << 9 / 5 << endl;
