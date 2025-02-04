@@ -5,8 +5,8 @@
 int main() {
 	using namespace std;
 	char animal[20] = "bear";			// animal содержит bear
-	const char * bird = "wren";			// bird содержит адрес строки
-	char * ps;					// не инициализировано
+	const char *bird = "wren";			// bird содержит адрес строки
+	char *ps;					// не инициализировано
 	cout << animal << " and ";			// отображение bear
 	cout << bird << "\n";				// отображение wren
 	// cout << ps << "\n";				// может отобразить мусор, но может вызвать
