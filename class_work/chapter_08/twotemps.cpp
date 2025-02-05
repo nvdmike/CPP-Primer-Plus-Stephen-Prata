@@ -1,9 +1,9 @@
-// twotemps.cpp -- использование перегруженных шаблонов функций
+// twotemps.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹С… С€Р°Р±Р»РѕРЅРѕРІ С„СѓРЅРєС†РёР№
 #include <iostream>
 
-template <typename T>	// исходный шаблон
+template <typename T>	// РёСЃС…РѕРґРЅС‹Р№ С€Р°Р±Р»РѕРЅ
 void Swap(T &a, T &b);
-template <typename T>	// новый шаблон
+template <typename T>	// РЅРѕРІС‹Р№ С€Р°Р±Р»РѕРЅ
 void Swap(T *a, T *b, int n);
 void Show(int a[]);
 
@@ -14,14 +14,14 @@ int main() {
 	int i = 10, j = 20;
 	cout << "i, j = " << i << ", " << j << ".\n";
 	cout << "Using compiler-generated int swapper:\n";
-	Swap(i, j);			// соответствует исходному шаблону
+	Swap(i, j);		// СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РёСЃС…РѕРґРЅРѕРјСѓ С€Р°Р±Р»РѕРЅСѓ
 	cout << "Now i, j = " << i << ", " << j << ".\n";
 	int d1[LIM] = { 0, 7, 0, 4, 1, 7, 7, 6 };
 	int d2[LIM] = { 0, 7, 2, 0, 1, 9, 6, 9 };
 	cout << "Original arrays:\n";
 	Show(d1);
 	Show(d2);
-	Swap(d1, d2, LIM);	// соответствует новому шаблону
+	Swap(d1, d2, LIM);	// СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РЅРѕРІРѕРјСѓ С€Р°Р±Р»РѕРЅСѓ
 	cout << "Swapped arrays:\n";
 	Show(d1);
 	Show(d2);
