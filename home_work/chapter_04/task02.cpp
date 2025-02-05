@@ -11,8 +11,8 @@ int main() {
 	using namespace std;
 	string name;
 	string dessert;
-	cout << "Enter your name:\n";				// запрос имени
-	getline(cin, dessert);						// читать до символа новой строки
+	cout << "Enter your name:\n";			// запрос имени
+	getline(cin, dessert);				// читать до символа новой строки
 	cout << "Enter your favorite dessert:\n";	// запрос любимого дессерта
 	getline(cin, name);
 	cout << "I have some delicious " << dessert;
