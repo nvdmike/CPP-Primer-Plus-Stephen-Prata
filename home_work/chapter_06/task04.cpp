@@ -44,8 +44,6 @@
 #include <iostream>
 #include <string>
 
-void showMenu();
-
 const int SIZE = 5;
 struct bop {
     std::string realName;   // реальное имя
@@ -53,6 +51,8 @@ struct bop {
     std::string bopName;    // секретное имя БОП
     int preference;         // 0 = полное имя, 1 = титул, 2 = имя БОП
 };
+
+void showMenu();
 
 int main() {
     std::cout << "Benevolent Order of Programmers Report\n";
