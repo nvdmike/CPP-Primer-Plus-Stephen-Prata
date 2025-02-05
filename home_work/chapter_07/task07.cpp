@@ -10,7 +10,6 @@
 #include <iostream>
 
 const int MAX = 5;
-
 // Прототипы функций
 double* fill_array(double *begin, double *end);
 void show_array(double *begin, double *end);	// не изменять данные
