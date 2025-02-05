@@ -1,7 +1,7 @@
-// funtemp.cpp -- использование шаблона функции
+// funtemp.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° С„СѓРЅРєС†РёРё
 #include <iostream>
-// прототип шаблона функции
-template <typename T>	// или class T
+// РїСЂРѕС‚РѕС‚РёРї С€Р°Р±Р»РѕРЅР° С„СѓРЅРєС†РёРё
+template <typename T>	// РёР»Рё class T
 void Swap(T &a, T &b);
 
 int main() {
@@ -10,21 +10,21 @@ int main() {
 	int j = 20;
 	cout << "i, j = " << i << ", " << j << ".\n";
 	cout << "Using compiler-generated int swapper:\n";
-	Swap(i, j);	// генерирует void swap(int &, int &)
+	Swap(i, j);	// РіРµРЅРµСЂРёСЂСѓРµС‚ void swap(int &, int &)
 	cout << "Now i, j = " << i << ", " << j << ".\n";
 	double x = 24.5;
 	double y = 81.7;
 	cout << "x, y = " << x << ", " << y << ".\n"; 
 	cout << "Using compiler-generated int swapper:\n";
-	Swap(x, y);	// генерирует void swap(double &, double &)
+	Swap(x, y);	// РіРµРЅРµСЂРёСЂСѓРµС‚ void swap(double &, double &)
 	cout << "Now x, y = " << x << ", " << y << ".\n";
 	//cin.get();
 	return 0;
 }
-// определение шаблона функции
-template <typename T>	// или class T
+// РѕРїСЂРµРґРµР»РµРЅРёРµ С€Р°Р±Р»РѕРЅР° С„СѓРЅРєС†РёРё
+template <typename T>	// РёР»Рё class T
 void Swap(T &a, T &b) {
-	T temp;	// temp - переменная типа T
+	T temp;		// temp - РїРµСЂРµРјРµРЅРЅР°СЏ С‚РёРїР° T
 	temp = a;
 	a = b;
 	b = temp;
