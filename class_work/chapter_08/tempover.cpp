@@ -1,9 +1,9 @@
-// tempover.cpp -- перегрузка шаблонов
+// tempover.cpp -- РїРµСЂРµРіСЂСѓР·РєР° С€Р°Р±Р»РѕРЅРѕРІ
 #include <iostream>
 
-template <typename T>	// шаблон A
+template <typename T>	// С€Р°Р±Р»РѕРЅ A
 void ShowArray(T arr[], int n);
-template <typename T>	// шаблон B
+template <typename T>	// С€Р°Р±Р»РѕРЅ B
 void ShowArray(T *arr[], int n);
 
 struct debts {
@@ -20,14 +20,14 @@ int main() {
 		{ "Iby Stout", 1800.0 }
 	};
 	double *pd[3];
-	// установка указателей на члены amount структур в mr_E
+	// СѓСЃС‚Р°РЅРѕРІРєР° СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° С‡Р»РµРЅС‹ amount СЃС‚СЂСѓРєС‚СѓСЂ РІ mr_E
 	for (int i = 0; i < 3; ++i)
 		pd[i] = &mr_E[i].amount;
 	cout << "Listing Mr. E's counts of things:\n";
-	// things - массив значений int
-	ShowArray(things, 6);	// использует шаблон A
+	// things - РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ int
+	ShowArray(things, 6);	// РёСЃРїРѕР»СЊР·СѓРµС‚ С€Р°Р±Р»РѕРЅ A
 	cout << "Listing Mr. E's debts:\n";
-	ShowArray(pd, 3);	// использует шаблон B (более специализированный)
+	ShowArray(pd, 3);	// РёСЃРїРѕР»СЊР·СѓРµС‚ С€Р°Р±Р»РѕРЅ B (Р±РѕР»РµРµ СЃРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Р№)
 	return 0;
 }
 
