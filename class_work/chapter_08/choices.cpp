@@ -1,7 +1,7 @@
-// choices.cpp -- выбор шаблона
+// choices.cpp -- РІС‹Р±РѕСЂ С€Р°Р±Р»РѕРЅР°
 #include <iostream>
 
-template <class T>			// или template <typename T>
+template <class T>			// РёР»Рё template <typename T>
 T lesser(T a, T b) {		// #1
 	return a < b ? a : b;
 }
@@ -17,9 +17,9 @@ int main() {
 	int n = -30;
 	double x = 15.5;
 	double y = 25.9;
-	cout << lesser(m, n) << endl;		// используется #2
-	cout << lesser(x, y) << endl;		// используется #1 с double
-	cout << lesser<>(m, n) << endl;		// используется #1 с int
-	cout << lesser<int>(x, y) << endl;	// используется #1 с int
+	cout << lesser(m, n) << endl;		// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ #2
+	cout << lesser(x, y) << endl;		// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ #1 СЃ double
+	cout << lesser<>(m, n) << endl;		// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ #1 СЃ int
+	cout << lesser<int>(x, y) << endl;	// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ #1 СЃ int
 	return 0;
 }
