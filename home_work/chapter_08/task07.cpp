@@ -8,15 +8,15 @@
 */
 #include <iostream>
 
-template <typename T>
-T sumArray(T arr[], int n);
-template <typename T>
-T sumArray(T *arr[], int n);
-
 struct debts {
 	char name[50];
 	double amount;
 };
+
+template <typename T>
+T sumArray(T arr[], int n);
+template <typename T>
+T sumArray(T *arr[], int n);
 
 int main() {
 	using namespace std;
