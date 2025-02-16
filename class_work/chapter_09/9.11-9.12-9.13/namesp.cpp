@@ -1,4 +1,4 @@
-// namesp.cpp -- пространства имён
+// namesp.cpp -- РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° РёРјС‘РЅ
 #include <iostream>
 #include "namesp.h"
 
@@ -7,9 +7,9 @@ namespace pers {
 	using std::cin;
 
 	void getPerson(person &rp) {
-		cout << "Enter first name: ";	// ввод имени
+		cout << "Enter first name: ";	// РІРІРѕРґ РёРјРµРЅРё
 		cin >> rp.fname;
-		cout << "Enter last name: ";	// ввод фамилии
+		cout << "Enter last name: ";	// РІРІРѕРґ С„Р°РјРёР»РёРё
 		cin >> rp.lname;
 	}
 
@@ -21,7 +21,7 @@ namespace pers {
 namespace debts {
 	void getDebt(debt &rd) {
 		getPerson(rd.name);
-		std::cout << "Enter debt: ";	// ввод суммы задолженности
+		std::cout << "Enter debt: ";	// РІРІРѕРґ СЃСѓРјРјС‹ Р·Р°РґРѕР»Р¶РµРЅРЅРѕСЃС‚Рё
 		std::cin >> rd.amount;
 	}
 
