@@ -1,6 +1,6 @@
 // namesp.h
 #include <string>
-// создание пространств имён pers и debts
+// СЃРѕР·РґР°РЅРёРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІ РёРјС‘РЅ pers Рё debts
 namespace pers {
 	struct person {
 		std::string fname;
