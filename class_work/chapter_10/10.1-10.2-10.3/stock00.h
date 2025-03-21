@@ -18,6 +18,6 @@ class Stock {	// объ¤вление класса
 		void sell(long num, double price);
 		void update(double price);
 		void show();
-};				// обратите внимание на точку с зап¤той в конце
+};		// обратите внимание на точку с зап¤той в конце
 
 #endif
