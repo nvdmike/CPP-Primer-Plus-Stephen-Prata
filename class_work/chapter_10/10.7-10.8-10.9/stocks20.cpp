@@ -1,8 +1,8 @@
-// stocks20.cpp -- дополненная версия
+// stocks20.cpp -- РґРѕРїРѕР»РЅРµРЅРЅР°СЏ РІРµСЂСЃРёСЏ
 #include <iostream>
 #include "stock20.h"
-// конструкторы
-Stock::Stock() {	// конструктор по умолчанию
+// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹
+Stock::Stock() {	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	company = "no name";
 	shares = 0;
 	shareVal = 0.0;
@@ -13,21 +13,21 @@ Stock::Stock(const std::string &co, long n, double pr) {
 	company = co;
 	if (n < 0) {
 		std::cout << "Number of shares can't be negative; "
-				  << company << " shares set to 0.\n";
+			  << company << " shares set to 0.\n";
 		shares = 0;
 	} else
 		shares = n;
 	shareVal = pr;
 	setTot();
 }
-// деструктор
-Stock::~Stock() {	// деструктор не выводящий сообщений
+// РґРµСЃС‚СЂСѓРєС‚РѕСЂ
+Stock::~Stock() {	// РґРµСЃС‚СЂСѓРєС‚РѕСЂ РЅРµ РІС‹РІРѕРґСЏС‰РёР№ СЃРѕРѕР±С‰РµРЅРёР№
 }
-// другие методы
+// РґСЂСѓРіРёРµ РјРµС‚РѕРґС‹
 void Stock::buy(long num, double price) {
 	if (num < 0) {
 		std::cout << "Number of shares purchased can't be negative. "
-				  << "Trasaction aborted.\n";
+			  << "Trasaction aborted.\n";
 	} else {
 		shares += num;
 		shareVal = price;
@@ -38,10 +38,10 @@ void Stock::sell(long num, double price) {
 	using std::cout;
 	if (num < 0) {
 		cout << "Number of shares sold can't be negative. "
-			 << "Trasaction aborted.\n";
+		     << "Trasaction aborted.\n";
 	} else if (num > shares) {
 		cout << "You can't sell more than you have! "
-			 << "Trasaction aborted.\n";
+		     << "Trasaction aborted.\n";
 	} else {
 		shares -= num;
 		shareVal = price;
@@ -57,16 +57,16 @@ void Stock::update(double price) {
 void Stock::show() const {
 	using std::cout;
 	using std::ios_base;
-	// установка формата в #.###
+	// СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјР°С‚Р° РІ #.###
 	ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
 	std::streamsize prec = cout.precision(3);
 	cout << "Company: " << company
-		 << " Shares: " << shares << '\n';
-	// установка формата в #.##
+	     << " Shares: " << shares << '\n';
+	// СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјР°С‚Р° РІ #.##
 	cout.precision(2);
 	cout << " Share price: $" << shareVal
-		 << " Total Worth: $" << totalVal << '\n';
-	// восстановление исходного формата
+	     << " Total Worth: $" << totalVal << '\n';
+	// РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РёСЃС…РѕРґРЅРѕРіРѕ С„РѕСЂРјР°С‚Р°
 	cout.setf(orig, ios_base::floatfield);
 	cout.precision(prec);
 }
