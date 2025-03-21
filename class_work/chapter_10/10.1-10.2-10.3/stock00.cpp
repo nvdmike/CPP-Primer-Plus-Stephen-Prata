@@ -1,12 +1,12 @@
-// stock00.cpp -- реализация класса Stock
-// версия 00
+// stock00.cpp -- СЂРµР°Р»РёР·Р°С†РёВ¤ РєР»Р°СЃСЃР° Stock
+// РІРµСЂСЃРёВ¤ 00
 #include <iostream>
 #include "stock00.h"
 
 void Stock::acquire(const std::string &co, long n, double pr) {
 	company = co;
 	if (n < 0) {
-		// количество пакетов не может быть отрицательным; устанавливается в 0.
+		// РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°РєРµС‚РѕРІ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј; СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃВ¤ РІ 0.
 		std::cout << "Numbers of shares can't be negative; "
 				  << company << " shares set to 0.\n";
 		shares = 0;
@@ -19,7 +19,7 @@ void Stock::acquire(const std::string &co, long n, double pr) {
 
 void Stock::buy(long num, double price) {
 	if (num < 0) {
-		// количество приобретаемых пакетов не может быть отрицательным. Транзакция прервана.
+		// РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРёРѕР±СЂРµС‚Р°РµРјС‹С… РїР°РєРµС‚РѕРІ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј. вЂњСЂР°РЅР·Р°РєС†РёВ¤ РїСЂРµСЂРІР°РЅР°.
 		std::cout << "Numbers of shares purchased can't be negative. "
 				  << "Transaction is aborted.\n";
 	} else {
@@ -31,11 +31,11 @@ void Stock::buy(long num, double price) {
 
 void Stock::sell(long num, double price) {
 	if (num < 0) {
-		// количество продаваемых пакетов не может быть отрицательным. Транзакция прервана.
+		// РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґР°РІР°РµРјС‹С… РїР°РєРµС‚РѕРІ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј. вЂњСЂР°РЅР·Р°РєС†РёВ¤ РїСЂРµСЂРІР°РЅР°.
 		std::cout << "Numbers of shares sold can't be negative. "
 				  << "Transaction is aborted.\n";
 	} else if (num > shares) {
-		// нельзя продать больше того, чем находится во владении. Транзакция прервана.
+		// РЅРµР»СЊР·В¤ РїСЂРѕРґР°С‚СЊ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡РµРј РЅР°С…РѕРґРёС‚СЃВ¤ РІРѕ РІР»Р°РґРµРЅРёРё. вЂњСЂР°РЅР·Р°РєС†РёВ¤ РїСЂРµСЂРІР°РЅР°.
 		std::cout << "You can't sell more than you have! "
 				  << "Transaction is aborted.\n";
 	} else {
@@ -53,17 +53,17 @@ void Stock::update(double price) {
 void Stock::show() {
 	using std::cout;
 	using std::ios_base;
-	// установка формата в #.###
+	// СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјР°С‚Р° РІ #.###
 	ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
 	std::streamsize prec = cout.precision(3);
-	// вывод названия компании, количества пакетов, цены пакета и общей стоимости.
+	// РІС‹РІРѕРґ РЅР°Р·РІР°РЅРёВ¤ РєРѕРјРїР°РЅРёРё, РєРѕР»РёС‡РµСЃС‚РІР° РїР°РєРµС‚РѕРІ, С†РµРЅС‹ РїР°РєРµС‚Р° Рё РѕР±С‰РµР№ СЃС‚РѕРёРјРѕСЃС‚Рё.
 	std::cout << "Company: " << company
 			  << " Shares: " << shares << '\n'
 			  << " Share price: $" << shareVal;
-	// установка формата в #.##
+	// СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјР°С‚Р° РІ #.##
 	cout.precision(2);
 	cout << " Total Worth: $" << totalVal << '\n';
-	// восстановление исходного формата
+	// РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РёСЃС…РѕРґРЅРѕРіРѕ С„РѕСЂРјР°С‚Р°
 	cout.setf(orig, ios_base::floatfield);
 	cout.precision(prec);
 }
