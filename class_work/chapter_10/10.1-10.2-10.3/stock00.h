@@ -1,11 +1,11 @@
-// stock00.h -- интерфейс класса Stock
-// версия 00
+// stock00.h -- РёРЅС‚РµСЂС„РµР№СЃ РєР»Р°СЃСЃР° Stock
+// РІРµСЂСЃРёВ¤ 00
 #ifndef STOCK00_H_
 #define STOCK00_H_
 
 #include <string>
 
-class Stock {	// объявление класса
+class Stock {	// РѕР±СЉВ¤РІР»РµРЅРёРµ РєР»Р°СЃСЃР°
 	private:
 		std::string company;
 		long shares;
@@ -18,6 +18,6 @@ class Stock {	// объявление класса
 		void sell(long num, double price);
 		void update(double price);
 		void show();
-};				// обратите внимание на точку с запятой в конце
+};				// РѕР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ РЅР° С‚РѕС‡РєСѓ СЃ Р·Р°РїВ¤С‚РѕР№ РІ РєРѕРЅС†Рµ
 
 #endif
