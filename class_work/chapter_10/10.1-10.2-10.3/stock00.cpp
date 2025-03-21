@@ -8,7 +8,7 @@ void Stock::acquire(const std::string &co, long n, double pr) {
 	if (n < 0) {
 		// количество пакетов не может быть отрицательным; устанавливаетс¤ в 0.
 		std::cout << "Numbers of shares can't be negative; "
-				  << company << " shares set to 0.\n";
+			  << company << " shares set to 0.\n";
 		shares = 0;
 	} else {
 		shares = n;
@@ -21,7 +21,7 @@ void Stock::buy(long num, double price) {
 	if (num < 0) {
 		// количество приобретаемых пакетов не может быть отрицательным. “ранзакци¤ прервана.
 		std::cout << "Numbers of shares purchased can't be negative. "
-				  << "Transaction is aborted.\n";
+			  << "Transaction is aborted.\n";
 	} else {
 		shares += num;
 		shareVal = price;
@@ -33,11 +33,11 @@ void Stock::sell(long num, double price) {
 	if (num < 0) {
 		// количество продаваемых пакетов не может быть отрицательным. “ранзакци¤ прервана.
 		std::cout << "Numbers of shares sold can't be negative. "
-				  << "Transaction is aborted.\n";
+			  << "Transaction is aborted.\n";
 	} else if (num > shares) {
 		// нельз¤ продать больше того, чем находитс¤ во владении. “ранзакци¤ прервана.
 		std::cout << "You can't sell more than you have! "
-				  << "Transaction is aborted.\n";
+			  << "Transaction is aborted.\n";
 	} else {
 		shares -= num;
 		shareVal = price;
@@ -58,11 +58,11 @@ void Stock::show() {
 	std::streamsize prec = cout.precision(3);
 	// вывод названи¤ компании, количества пакетов, цены пакета и общей стоимости.
 	std::cout << "Company: " << company
-			  << " Shares: " << shares << '\n'
-			  << " Share price: $" << shareVal;
+		  << " Shares: " << shares << '\n';
 	// установка формата в #.##
 	cout.precision(2);
-	cout << " Total Worth: $" << totalVal << '\n';
+	cout << " Share price: $" << shareVal
+	     << " Total Worth: $" << totalVal << '\n';
 	// восстановление исходного формата
 	cout.setf(orig, ios_base::floatfield);
 	cout.precision(prec);
