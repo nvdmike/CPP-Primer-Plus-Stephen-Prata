@@ -1,4 +1,4 @@
-//#pragma once -- дополненная версия
+//#pragma once -- РґРѕРїРѕР»РЅРµРЅРЅР°СЏ РІРµСЂСЃРёСЏ
 #ifndef STOCK20_H_
 #define STOCK20_H_
 #include <string>
@@ -11,9 +11,9 @@ class Stock {
 		double totalVal;
 		void setTot() { totalVal = shares * shareVal; }
 	public:
-		Stock();	// конструктор по умолчанию
+		Stock();	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		Stock(const std::string &co, long n = 0, double pr = 0.0);
-		~Stock();	// деструктор
+		~Stock();	// РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 		void buy(long num, double price);
 		void sell(long num, double price);
 		void update(double price);
