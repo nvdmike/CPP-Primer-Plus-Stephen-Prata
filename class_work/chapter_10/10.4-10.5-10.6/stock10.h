@@ -1,4 +1,4 @@
-// stock10.h -- объявление класса Stock с добавленными конструкторами и деструктором
+// stock10.h -- РѕР±СЉСЏРІР»РµРЅРёРµ РєР»Р°СЃСЃР° Stock СЃ РґРѕР±Р°РІР»РµРЅРЅС‹РјРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°РјРё Рё РґРµСЃС‚СЂСѓРєС‚РѕСЂРѕРј
 #ifndef STOCK10_H_
 #define STOCK10_H_
 #include <string>
@@ -11,10 +11,10 @@ class Stock {
 		double totalVal;
 		void setTot() { totalVal = shares * shareVal; }
 	public:
-		// два конструктора
-		Stock();	// конструктор по умолчанию
+		// РґРІР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+		Stock();	// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		Stock(const std::string &co, long n = 0, double pr = 0.0);
-		~Stock();	// деструктор
+		~Stock();	// РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 		void buy(long num, double price);
 		void sell(long num, double price);
 		void update(double price);
