@@ -1,4 +1,4 @@
-//#pragma once -- дополненная версия
+// stock20 -- дополненная версия
 #ifndef STOCK20_H_
 #define STOCK20_H_
 #include <string>
