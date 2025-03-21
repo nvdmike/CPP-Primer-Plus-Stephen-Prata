@@ -1,12 +1,12 @@
-// usestock2.cpp -- использование класса Stock
-// компилировать вместе с stock20.cpp
+// usestock2.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєР»Р°СЃСЃР° Stock
+// РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ РІРјРµСЃС‚Рµ СЃ stock20.cpp
 #include <iostream>
 #include "stock20.h"
 
 const int STKS = 4;
 
 int main() {
-	// создание массива инициализированных объектов
+	// СЃРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР° РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
 	Stock stocks[STKS] = {
 		Stock("NanoSmart", 12, 20.0),
 		Stock("Boffo Objects", 200, 2.0),
@@ -17,11 +17,11 @@ int main() {
 	int st;
 	for (st = 0; st < STKS; ++st)
 		stocks[st].show();
-	// установка указателя на первый элемент
+	// СѓСЃС‚Р°РЅРѕРІРєР° СѓРєР°Р·Р°С‚РµР»СЏ РЅР° РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚
 	const Stock *top = &stocks[0];
 	for (st = 1; st < STKS; ++st)
 		top = &top->topVal(stocks[st]);
-	// теперь top указывает на самый ценный пакет акций
+	// С‚РµРїРµСЂСЊ top СѓРєР°Р·С‹РІР°РµС‚ РЅР° СЃР°РјС‹Р№ С†РµРЅРЅС‹Р№ РїР°РєРµС‚ Р°РєС†РёР№
 	std::cout << "\nMost valuable holding:\n";
 	top->show();
 	return 0;
