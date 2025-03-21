@@ -1,27 +1,27 @@
-// usestock1.cpp -- использование класса Stock
-// компилировать вместе с stock10.cpp
+// usestock1.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєР»Р°СЃСЃР° Stock
+// РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ РІРјРµСЃС‚Рµ СЃ stock10.cpp
 #include <iostream>
 #include "stock10.h"
 
 int main() {
 	{
 		using std::cout;
-		// использование конструкторов для создания новых объектов
+		// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІС‹С… РѕР±СЉРµРєС‚РѕРІ
 		cout << "Using constructors to create new objects\n";
-		Stock stock1("NanoSmart", 12, 20.0);			// первый синтаксис
+		Stock stock1("NanoSmart", 12, 20.0);			// РїРµСЂРІС‹Р№ СЃРёРЅС‚Р°РєСЃРёСЃ
 		stock1.show();
-		Stock stock2 = Stock("Boffo Objects", 2, 2.0);	// второй синтаксис
+		Stock stock2 = Stock("Boffo Objects", 2, 2.0);		// РІС‚РѕСЂРѕР№ СЃРёРЅС‚Р°РєСЃРёСЃ
 		stock2.show();
-		// присваивание stock1 объекту stock2
+		// РїСЂРёСЃРІР°РёРІР°РЅРёРµ stock1 РѕР±СЉРµРєС‚Сѓ stock2
 		cout << "Assigning stock1 to stock2:\n";
 		stock2 = stock1;
-		// вывод stock1 и stock2
+		// РІС‹РІРѕРґ stock1 Рё stock2
 		cout << "Listing stock1 and stock2:\n";
 		stock1.show();
 		stock2.show();
-		// использование конструктора для сброса объекта
+		// РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° РґР»СЏ СЃР±СЂРѕСЃР° РѕР±СЉРµРєС‚Р°
 		cout << "Using a constructor to reset ab object\n";
-		stock1 = Stock("Nifty Foods", 10, 50.0);		// временный объект
+		stock1 = Stock("Nifty Foods", 10, 50.0);		// РІСЂРµРјРµРЅРЅС‹Р№ РѕР±СЉРµРєС‚
 		cout << "Revised stock1:\n";
 		stock1.show();
 		cout << "Done\n";
