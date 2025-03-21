@@ -1,4 +1,4 @@
-// stock00.cpp -- реализаци¤ класса Stock
+// stock00.cpp -- реализация класса Stock
 // верси¤ 00
 #include <iostream>
 #include "stock00.h"
@@ -6,7 +6,7 @@
 void Stock::acquire(const std::string &co, long n, double pr) {
 	company = co;
 	if (n < 0) {
-		// количество пакетов не может быть отрицательным; устанавливаетс¤ в 0.
+		// количество пакетов не может быть отрицательным; устанавливается в 0.
 		std::cout << "Numbers of shares can't be negative; "
 			  << company << " shares set to 0.\n";
 		shares = 0;
@@ -19,7 +19,7 @@ void Stock::acquire(const std::string &co, long n, double pr) {
 
 void Stock::buy(long num, double price) {
 	if (num < 0) {
-		// количество приобретаемых пакетов не может быть отрицательным. “ранзакци¤ прервана.
+		// количество приобретаемых пакетов не может быть отрицательным. Транзакция прервана.
 		std::cout << "Numbers of shares purchased can't be negative. "
 			  << "Transaction is aborted.\n";
 	} else {
@@ -31,11 +31,11 @@ void Stock::buy(long num, double price) {
 
 void Stock::sell(long num, double price) {
 	if (num < 0) {
-		// количество продаваемых пакетов не может быть отрицательным. “ранзакци¤ прервана.
+		// количество продаваемых пакетов не может быть отрицательным. Транзакция прервана.
 		std::cout << "Numbers of shares sold can't be negative. "
 			  << "Transaction is aborted.\n";
 	} else if (num > shares) {
-		// нельз¤ продать больше того, чем находитс¤ во владении. “ранзакци¤ прервана.
+		// нельз¤ продать больше того, чем находится во владении. Транзакция прервана.
 		std::cout << "You can't sell more than you have! "
 			  << "Transaction is aborted.\n";
 	} else {
@@ -56,7 +56,7 @@ void Stock::show() {
 	// установка формата в #.###
 	ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
 	std::streamsize prec = cout.precision(3);
-	// вывод названи¤ компании, количества пакетов, цены пакета и общей стоимости.
+	// вывод названия компании, количества пакетов, цены пакета и общей стоимости.
 	std::cout << "Company: " << company
 		  << " Shares: " << shares << '\n';
 	// установка формата в #.##
