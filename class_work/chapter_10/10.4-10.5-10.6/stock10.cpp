@@ -1,7 +1,6 @@
 // stock10.cpp -- реализация класса Stock с добавленными конструкторами и деструктором
 #include <iostream>
 #include "stock10.h"
-
 // конструкторы (версии с выводом сообщений)
 Stock::Stock() {	// конструктор по умолчанию
 	std::cout << "Default constructor called\n";
