@@ -34,6 +34,7 @@ void Stock::buy(long num, double price) {
 		setTot();
 	}
 }
+
 void Stock::sell(long num, double price) {
 	using std::cout;
 	if (num < 0) {
