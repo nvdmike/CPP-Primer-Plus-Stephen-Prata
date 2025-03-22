@@ -34,5 +34,5 @@ travel_time sum(travel_time t1, travel_time t2) {
 void show_time(travel_time t) {
 	using namespace std;
 	cout << t.hours << " hours, "
-		 << t.mins << " minutes.\n";	// часов, минут
+	     << t.mins << " minutes.\n";	// часов, минут
 }
