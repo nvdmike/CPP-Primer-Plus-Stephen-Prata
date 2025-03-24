@@ -1,16 +1,16 @@
-// stacker.cpp -- тестирование класса Stack
+// stacker.cpp -- С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ РєР»Р°СЃСЃР° Stack
 #include <iostream>
-#include <cctype>	// или ctype.h
+#include <cctype>	// РёР»Рё ctype.h
 #include "stack.h"
 
 int main() {
 	using namespace std;
-	Stack st;												// создание пустого стека
+	Stack st;								// СЃРѕР·РґР°РЅРёРµ РїСѓСЃС‚РѕРіРѕ СЃС‚РµРєР°
 	char ch;
 	unsigned long po;
-	// A - добавление заказа, P - обработка заказа, Q - завершение
+	// A - РґРѕР±Р°РІР»РµРЅРёРµ Р·Р°РєР°Р·Р°, P - РѕР±СЂР°Р±РѕС‚РєР° Р·Р°РєР°Р·Р°, Q - Р·Р°РІРµСЂС€РµРЅРёРµ
 	cout << "Please enter A to add a purchase order,\n"
-		 << "P to process a PO, or Q to quit.\n";
+	     << "P to process a PO, or Q to quit.\n";
 	while (cin >> ch && toupper(ch) != 'Q') {
 		while (cin.get() != '\n')
 			continue;
@@ -21,25 +21,25 @@ int main() {
 		switch (ch) {
 			case 'A':
 			case 'a':
-				cout << "Enter a PO number to add: ";		// запрос номера заказа
+				cout << "Enter a PO number to add: ";		// Р·Р°РїСЂРѕСЃ РЅРѕРјРµСЂР° Р·Р°РєР°Р·Р°
 				cin >> po;
 				if (st.isfull())
-					cout << "stack already full\n";			// стек уже полон
+					cout << "stack already full\n";		// СЃС‚РµРє СѓР¶Рµ РїРѕР»РѕРЅ
 				else
 					st.push(po);
 				break;
 			case 'P':
 			case 'p':
 				if (st.isempty())
-					cout << "stack already empty\n";		// стек уже пуст
+					cout << "stack already empty\n";	// СЃС‚РµРє СѓР¶Рµ РїСѓСЃС‚
 				else {
 					st.pop(po);
-					cout << "PO #" << po << " popped\n";	// заказ вытолкнут
+					cout << "PO #" << po << " popped\n";	// Р·Р°РєР°Р· РІС‹С‚РѕР»РєРЅСѓС‚
 				}
 				break;
 		}
 		cout << "Please enter A to add a purchase order,\n"
-			 << "P to process a PO, or Q to quit.\n";
+		     << "P to process a PO, or Q to quit.\n";
 	}
 	cout << "Bye\n";
 	return 0;
