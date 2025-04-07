@@ -1,4 +1,4 @@
-// mytime0.cpp -- реализация методов Time
+// mytime0.cpp -- СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґРѕРІ Time
 #include <iostream>
 #include "mytime0.h"
 
