@@ -1,5 +1,5 @@
-// usetime0.cpp -- использование первой черновой версии класса Time
-// компилировать usetime0.cpp и mytime0.cpp вместе
+// usetime0.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїРµСЂРІРѕР№ С‡РµСЂРЅРѕРІРѕР№ РІРµСЂСЃРёРё РєР»Р°СЃСЃР° Time
+// РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ usetime0.cpp Рё mytime0.cpp РІРјРµСЃС‚Рµ
 #include <iostream>
 #include "mytime0.h"
 
@@ -10,13 +10,13 @@ int main() {
 	Time coding(2, 40);
 	Time fixing(5, 55);
 	Time total;
-	cout << "planning time = ";	// время на планирование
+	cout << "planning time = ";	// РІСЂРµРјСЏ РЅР° РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ
 	planning.show();
 	cout << endl;
-	cout << "coding time = ";	// время на кодирование
+	cout << "coding time = ";	// РІСЂРµРјСЏ РЅР° РєРѕРґРёСЂРѕРІР°РЅРёРµ
 	coding.show();
 	cout << endl;
-	cout << "fixing time = ";	// время на исправление
+	cout << "fixing time = ";	// РІСЂРµРјСЏ РЅР° РёСЃРїСЂР°РІР»РµРЅРёРµ
 	fixing.show();
 	cout << endl;
 	total = coding.sum(fixing);
