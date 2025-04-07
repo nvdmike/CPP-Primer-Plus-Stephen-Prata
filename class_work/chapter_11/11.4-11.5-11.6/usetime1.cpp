@@ -1,5 +1,5 @@
-//usetime1.cpp -- использование второй черновой версии класса Time
-//компилировать usetime1.cpp и mytime1.cpp вместе
+//usetime1.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РІС‚РѕСЂРѕР№ С‡РµСЂРЅРѕРІРѕР№ РІРµСЂСЃРёРё РєР»Р°СЃСЃР° Time
+//РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ usetime1.cpp Рё mytime1.cpp РІРјРµСЃС‚Рµ
 #include <iostream>
 #include "mytime1.h"
 
@@ -10,26 +10,26 @@ int main() {
 	Time coding(2, 40);
 	Time fixing(5, 55);
 	Time total;
-	cout << "planning time = ";		// время на планирование
+	cout << "planning time = ";	// РІСЂРµРјВ¤ РЅР° РїР»Р°РЅРёСЂРѕРІР°РЅРёРµ
 	planning.show();
 	cout << endl;
-	cout << "coding time = ";		// время на кодирование
+	cout << "coding time = ";	// РІСЂРµРјВ¤ РЅР° РєРѕРґРёСЂРѕРІР°РЅРёРµ
 	coding.show();
 	cout << endl;
-	cout << "fixing time = ";		// время на исправление
+	cout << "fixing time = ";	// РІСЂРµРјВ¤ РЅР° РёСЃРїСЂР°РІР»РµРЅРёРµ
 	fixing.show();
 	cout << endl;
 	total = coding + fixing;
-	// нотация с операцией
-	cout << "coding + fixing = ";	// кодирование + исправление
+	// РЅРѕС‚Р°С†РёВ¤ СЃ РѕРїРµСЂР°С†РёРµР№
+	cout << "coding + fixing = ";	// РєРѕРґРёСЂРѕРІР°РЅРёРµ + РёСЃРїСЂР°РІР»РµРЅРёРµ
 	total.show();
 	cout << endl;
 	Time morefixing(3, 28);
-	cout << "more fixing time = ";	// дополнительное время на исправление
+	cout << "more fixing time = ";	// РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ РІСЂРµРјВ¤ РЅР° РёСЃРїСЂР°РІР»РµРЅРёРµ
 	morefixing.show();
 	cout << endl;
 	total = morefixing.operator+(total);
-	// нотация с функцией
+	// РЅРѕС‚Р°С†РёВ¤ СЃ С„СѓРЅРєС†РёРµР№
 	cout << "morefixing.operator+(total) = ";
 	total.show();
 	cout << endl;
