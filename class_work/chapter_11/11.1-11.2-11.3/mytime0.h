@@ -1,4 +1,4 @@
-// mytime0.h -- класс Time до перегрузки операции
+// mytime0.h -- РєР»Р°СЃСЃ Time РґРѕ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С†РёРё
 #ifndef MYTIME0_H_
 #define MYTIME0_H_
 
@@ -17,4 +17,3 @@ class Time {
 };
 
 #endif
-
