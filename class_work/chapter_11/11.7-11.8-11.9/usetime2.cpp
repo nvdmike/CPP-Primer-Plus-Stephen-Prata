@@ -1,5 +1,5 @@
-// usetime2.cpp -- использование третьей черновой версии класса Time
-// компилировать usetime2.cpp и mytime2.cpp вместе
+// usetime2.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С‚СЂРµС‚СЊРµР№ С‡РµСЂРЅРѕРІРѕР№ РІРµСЂСЃРёРё РєР»Р°СЃСЃР° Time
+// РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ usetime2.cpp Рё mytime2.cpp РІРјРµСЃС‚Рµ
 #include <iostream>
 #include "mytime2.h"
 
@@ -11,21 +11,21 @@ int main() {
 	Time total;
 	Time diff;
 	Time adjusted;
-	cout << "weeding time = ";		// время на подготовку
+	cout << "weeding time = ";	// РІСЂРµРјСЏ РЅР° РїРѕРґРіРѕС‚РѕРІРєСѓ
 	weeding.show();
 	cout << endl;
-	cout << "waxing time = ";		// полезное время
+	cout << "waxing time = ";	// РїРѕР»РµР·РЅРѕРµ РІСЂРµРјСЏ
 	waxing.show();
 	cout << endl;
-	cout << "total work time = ";	// общее рабочее время
-	total = weeding + waxing;		// используется operator+()
+	cout << "total work time = ";	// РѕР±С‰РµРµ СЂР°Р±РѕС‡РµРµ РІСЂРµРјСЏ
+	total = weeding + waxing;	// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ operator+()
 	total.show();
 	cout << endl;
-	diff = weeding - waxing;		// используется operator-()
+	diff = weeding - waxing;	// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ operator-()
 	cout << "weeding time - waxing time = ";
 	diff.show();
 	cout << endl;
-	adjusted = total * 1.5;			// используется operator*()
+	adjusted = total * 1.5;		// РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ operator*()
 	cout << "adjusted work time = ";
 	adjusted.show();
 	cout << endl;
