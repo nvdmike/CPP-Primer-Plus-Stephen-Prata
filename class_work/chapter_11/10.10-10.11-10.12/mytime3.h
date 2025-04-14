@@ -1,4 +1,4 @@
-// mytime3.h -- класс Time с друзьями
+// mytime3.h -- РєР»Р°СЃСЃ Time СЃ РґСЂСѓР·СЊСЏРјРё
 #ifndef MYTIME3_H_
 #define MYTIME3_H_
 #include <ostream>
@@ -16,7 +16,9 @@ class Time {
 		Time operator+(const Time &t) const;
 		Time operator-(const Time &t) const;
 		Time operator*(double n) const;
-		friend Time operator*(double m, const Time &t) { return t * m; } // встроенное определение
+		friend Time operator*(double m, const Time &t) {
+			return t * m;
+		} // РІСЃС‚СЂРѕРµРЅРЅРѕРµ РѕРїСЂРµРґРµР»РµРЅРёРµ
 		friend std::ostream &operator<<(std::ostream &os, const Time &t);
 };
 
