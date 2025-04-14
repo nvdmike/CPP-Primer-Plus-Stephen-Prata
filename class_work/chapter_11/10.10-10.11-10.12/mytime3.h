@@ -16,9 +16,7 @@ class Time {
 		Time operator+(const Time &t) const;
 		Time operator-(const Time &t) const;
 		Time operator*(double n) const;
-		friend Time operator*(double m, const Time &t) {
-			return t * m;
-		} // встроенное определение
+		friend Time operator*(double m, const Time &t) { return t * m; } // встроенное определение
 		friend std::ostream &operator<<(std::ostream &os, const Time &t);
 };
 
