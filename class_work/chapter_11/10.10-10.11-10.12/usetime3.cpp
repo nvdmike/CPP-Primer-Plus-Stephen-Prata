@@ -1,5 +1,5 @@
-// usetime3.cpp -- использование четвёртой черновой версии класса Time
-// компилировать usetime3.cpp и mytime3.cpp вместе
+// usetime3.cpp -- РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С‡РµС‚РІС‘СЂС‚РѕР№ С‡РµСЂРЅРѕРІРѕР№ РІРµСЂСЃРёРё РєР»Р°СЃСЃР° Time
+// РєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ usetime3.cpp Рё mytime3.cpp РІРјРµСЃС‚Рµ
 #include <iostream>
 #include "mytime3.h"
 
@@ -13,7 +13,7 @@ int main() {
 	cout << aida << "; " << tosca << endl;
 	temp = aida + tosca;	// operator+()
 	cout << "Aida + Tosca: " << temp << endl;
-	temp = aida * 1.17;		// функция-член operator*()
+	temp = aida * 1.17;	// С„СѓРЅРєС†РёСЏ-С‡Р»РµРЅ operator*()
 	cout << "Aida * 1.17: " << temp << endl;
 	cout << "10.0 * Tosca: " << 10.0 * tosca << endl;
 	return 0;
