@@ -1,4 +1,4 @@
-// mytime3.cpp -- реализация методов класса Time
+// mytime3.cpp -- СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° Time
 #include "mytime3.h"
 
 Time::Time() {
